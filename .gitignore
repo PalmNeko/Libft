@@ -1,0 +1,7 @@
+
+# projects
+libft_test
+
+# for language C
+*.o
+*.a

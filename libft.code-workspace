@@ -1,0 +1,29 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"files.exclude": {
+			"**/.git": true,
+			"**/.svn": true,
+			"**/.hg": true,
+			"**/CVS": true,
+			"**/.DS_Store": true,
+			"**/Thumbs.db": true,
+		},
+		"files.associations": {
+			"limits.h": "c",
+			"stddef.h": "c",
+			"mm_malloc.h": "c",
+			"stdlib.h": "c",
+			"stdint.h": "c",
+			"libc.h": "c",
+			"stdio.h": "c",
+			"regex.h": "c",
+			"libft.h": "c",
+			"errno.h": "c"
+		}
+	}
+}
