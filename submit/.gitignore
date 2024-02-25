@@ -2,3 +2,5 @@
 bonus
 *.o
 *.a
+*.d
+*.out

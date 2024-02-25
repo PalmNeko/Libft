@@ -12,8 +12,8 @@
 
 NAME = libft.a
 CC = cc
-REQUIRED_FLAGS = -Wall -Wextra -Werror
-CFLAGS = $(REQUIRED_FLAGS) $(DEBUG_CFLAGS)
+CFLAGS += -Wall -Wextra -Werror
+CFLAGS += -MP -MMD
 SRCS = \
 	ft_isalpha.c \
 	ft_isdigit.c \
@@ -80,16 +80,22 @@ BONUS = \
 	ft_lstmap_bonus.c
 
 OBJS = $(SRCS:.c=.o)
+DEPENDS = $(SRCS:.c=.d)
 BONUS_RULE = bonus
+BONUS_OBJS = $(BONUS:.c=.o)
+BONUS_DEPENDS = $(BONUS:.c=.d)
 RELINK_GURAD_FLIES = $(BONUS_RULE)
-CLEAN_FILES = $(OBJS) $(BONUS:.c=.o) $(RELINK_GURAD_FLIES)
+CLEAN_FILES = $(OBJS) $(BONUS_OBJS) $(RELINK_GURAD_FLIES) $(DEPENDS) $(BONUS_DEPENDS)
 
 all: $(NAME) $(BONUS_RULE)
+
+-include $(DEPENDS)
+-include $(BONUS_DEPENDS)
 
 $(NAME): $(OBJS)
 	ar rcs $(NAME) $?
 
-$(BONUS_RULE): $(BONUS:.c=.o)
+$(BONUS_RULE): $(BONUS_OBJS)
 	ar rcs $(NAME) $?
 	echo date > $(BONUS_RULE)
 
