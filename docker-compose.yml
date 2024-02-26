@@ -7,5 +7,6 @@ services:
       - type: bind
         source: ./submit
         target: /app
+    init: true
     tty: true
-    command: "/bin/bash"
+    command: "cat"
