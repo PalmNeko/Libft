@@ -7,3 +7,13 @@ help: ## Show options
 .PHONY: test
 test: ## Run tests
 	make --directory test test
+
+.PHONY: clean
+clean: ## Run clean
+	find . -name "*.o" -delete
+	find . -name "*.a" -delete
+	find . -name "*.d" -delete
+	find . -name "*.exe" -delete
+	find . -name "*.gcov" -delete
+	find . -name "*.gcno" -delete
+	find . -name "*.gcda" -delete

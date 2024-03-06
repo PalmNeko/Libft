@@ -7,3 +7,6 @@ libft_test
 *.a
 *.d
 *.exe
+*.gcov
+*.gcno
+*.gcda

@@ -24,7 +24,7 @@ LIBTYCTESTMAIN = ./libs/libtyctest_main.a
 LIBTYCTEST_INCDIR = ./includes/tyctest
 
 INCS = -I ../submit -I $(LIBTYCTEST_INCDIR)
-CFLAGS += -Wall -Wextra -Werror -MMD -MP $(INCS)
+CFLAGS += -coverage -g -O0 -Wall -Wextra -Werror -MMD -MP $(INCS)
 SRCS = $(shell find . -name "*_test.c")
 OBJS = $(SRCS:.c=.o)
 DEPENDS = $(SRCS:.c=.d)
@@ -54,6 +54,9 @@ clean:
 	make --directory $(shell dirname $(LIBFT)) clean
 	find . -name "*.d" -delete
 	find . -name "*.o" -delete
+	find . -name "*.gcda" -delete
+	find . -name "*.gcov" -delete
+	find . -name "*.gcno" -delete
 
 .PHONY: fclean
 fclean: clean
