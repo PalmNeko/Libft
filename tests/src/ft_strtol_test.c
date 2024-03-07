@@ -13,9 +13,9 @@ TEST(ft_strtol, simple_check)
 
 TEST(ft_strtol, base_zero_check)
 {
-	EXPECT_EQ(15, ft_strtol("0xG", NULL, 0));
+	EXPECT_EQ(15, ft_strtol("0xF", NULL, 0));
 	EXPECT_EQ(4079661091, ft_strtol("0xf32aB023", NULL, 0));
-	EXPECT_EQ(4285, ft_strtol("0123", NULL, 0));
+	EXPECT_EQ(83, ft_strtol("0123", NULL, 0));
 	EXPECT_EQ(168674, ft_strtol("0511342", NULL, 0));
 	EXPECT_EQ(195023, ft_strtol("195023", NULL, 0));
 	EXPECT_EQ(3587302, ft_strtol("3587302", NULL, 0));
@@ -33,23 +33,23 @@ TEST(ft_strtol, endcheck)
 
 TEST(ft_strtol, space_check)
 {
-	EXPECT_EQ(6, ft_strtol(" 111", NULL, 2));
+	EXPECT_EQ(7, ft_strtol(" 111", NULL, 2));
 	EXPECT_EQ(305, ft_strtol("\ngh", NULL, 18));
-	EXPECT_EQ(46101, ft_strtol("\rzkl", NULL, 3));
-	EXPECT_EQ(6, ft_strtol("\t111", NULL, 2));
-	EXPECT_EQ(6, ft_strtol("\f111", NULL, 2));
-	EXPECT_EQ(6, ft_strtol("\v111", NULL, 2));
-	EXPECT_EQ(6, ft_strtol("\r \n\t\f\v111", NULL, 2));
+	EXPECT_EQ(46101, ft_strtol("\rzkl", NULL, 36));
+	EXPECT_EQ(7, ft_strtol("\t111", NULL, 2));
+	EXPECT_EQ(7, ft_strtol("\f111", NULL, 2));
+	EXPECT_EQ(7, ft_strtol("\v111", NULL, 2));
+	EXPECT_EQ(7, ft_strtol("\r \n\t\f\v111", NULL, 2));
 }
 
 TEST(ft_strtol, sign_check)
 {
 	EXPECT_EQ(6, ft_strtol("110", NULL, 2));
 	EXPECT_EQ(6, ft_strtol("+110", NULL, 2));
-	EXPECT_EQ(6, ft_strtol("-110", NULL, 2));
+	EXPECT_EQ(-6, ft_strtol("-110", NULL, 2));
 	EXPECT_EQ(6, ft_strtol("110", NULL, 2));
 	EXPECT_EQ(6, ft_strtol("+110", NULL, 2));
-	EXPECT_EQ(6, ft_strtol("-110", NULL, 2));
+	EXPECT_EQ(-6, ft_strtol("-110", NULL, 2));
 }
 
 TEST(ft_strtol, endptr_check)
