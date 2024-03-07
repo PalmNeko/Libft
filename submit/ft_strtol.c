@@ -75,9 +75,9 @@ static int	chr_to_value_base(char c)
 	if (ft_isdigit(c))
 		return (c - '0');
 	else if (ft_islower(c))
-		return (c - 'a');
+		return (c - 'a' + 10);
 	else if (ft_isupper(c))
-		return (c - 'A');
+		return (c - 'A' + 10);
 	return (0);
 }
 
@@ -94,7 +94,7 @@ static int	exchange_base(char **str, int base)
 	}
 	else if (*str[0] == '0')
 	{
-		*str += 2;
+		*str += 1;
 		return (8);
 	}
 	return (-1);
