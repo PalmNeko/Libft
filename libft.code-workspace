@@ -23,7 +23,8 @@
 			"stdio.h": "c",
 			"regex.h": "c",
 			"libft.h": "c",
-			"errno.h": "c"
+			"errno.h": "c",
+			"tyctest.h": "c"
 		}
 	}
 }
