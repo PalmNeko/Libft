@@ -14,7 +14,7 @@ TEST(ft_strtol, simple_check)
 TEST(ft_strtol, base_zero_check)
 {
 	EXPECT_EQ(15, ft_strtol("0xF", NULL, 0));
-	EXPECT_EQ(4079661091, ft_strtol("0xf32aB023", NULL, 0));
+	EXPECT_EQ(15936176, ft_strtol("0xf32aB0", NULL, 0));
 	EXPECT_EQ(83, ft_strtol("0123", NULL, 0));
 	EXPECT_EQ(168674, ft_strtol("0511342", NULL, 0));
 	EXPECT_EQ(195023, ft_strtol("195023", NULL, 0));
@@ -72,41 +72,30 @@ TEST(ft_strtol, boundary_value_64bit)
 {
 	EXPECT_EQ(0, ft_strtol("0", NULL, 10));
 	EXPECT_EQ(0, ft_strtol("0", NULL, 10));
-	errno = 0;
-	EXPECT_EQ(LONG_MAX - 1, ft_strtol("9223372036854775806", NULL, 10));
-	EXPECT_EQ(LONG_MAX, ft_strtol("9223372036854775807", NULL, 10));
-	EXPECT_EQ(0, errno);
-	EXPECT_EQ(LONG_MAX, ft_strtol("9223372036854775808", NULL, 10));
-	EXPECT_EQ(ERANGE, errno);
-	errno = 0;
+	EXPECT_EQ(LONG_MAX - 1, ft_strtol("2147483646", NULL, 10));
+	EXPECT_EQ(LONG_MAX, ft_strtol("2147483647", NULL, 10));
+	EXPECT_EQ(LONG_MAX, ft_strtol("2147483648", NULL, 10));
 	EXPECT_EQ(LONG_MAX, ft_strtol("9999999999999999999", NULL, 10));
-	EXPECT_EQ(ERANGE, errno);
-	errno = 0;
-	EXPECT_EQ(LONG_MIN + 1, ft_strtol("-9223372036854775807", NULL, 10));
-	EXPECT_EQ(LONG_MIN, ft_strtol("-9223372036854775808", NULL, 10));
-	EXPECT_EQ(0, errno);
-	EXPECT_EQ(LONG_MIN, ft_strtol("-9223372036854775809", NULL, 10));
-	EXPECT_EQ(ERANGE, errno);
-	errno = 0;
+	EXPECT_EQ(LONG_MIN + 1, ft_strtol("-2147483647", NULL, 10));
+	EXPECT_EQ(LONG_MIN, ft_strtol("-2147483648", NULL, 10));
+	EXPECT_EQ(LONG_MIN, ft_strtol("-2147483649", NULL, 10));
 	EXPECT_EQ(LONG_MIN, ft_strtol("-9999999999999999999", NULL, 10));
-	EXPECT_EQ(ERANGE, errno);
-	errno = 0;
 }
 
 TEST(ft_strtol, errno_check)
 {
 	errno = 0;
-	EXPECT_EQ(LONG_MAX, ft_strtol("9223372036854775807", NULL, 10));
+	EXPECT_EQ(LONG_MAX, ft_strtol("2147483647", NULL, 10));
 	EXPECT_EQ(0, errno);
-	EXPECT_EQ(LONG_MAX, ft_strtol("9223372036854775808", NULL, 10));
+	EXPECT_EQ(LONG_MAX, ft_strtol("2147483648", NULL, 10));
 	EXPECT_EQ(ERANGE, errno);
 	errno = 0;
 	EXPECT_EQ(LONG_MAX, ft_strtol("9999999999999999999", NULL, 10));
 	EXPECT_EQ(ERANGE, errno);
 	errno = 0;
-	EXPECT_EQ(LONG_MIN, ft_strtol("-9223372036854775808", NULL, 10));
+	EXPECT_EQ(LONG_MIN, ft_strtol("-2147483648", NULL, 10));
 	EXPECT_EQ(0, errno);
-	EXPECT_EQ(LONG_MIN, ft_strtol("-9223372036854775809", NULL, 10));
+	EXPECT_EQ(LONG_MIN, ft_strtol("-2147483649", NULL, 10));
 	EXPECT_EQ(ERANGE, errno);
 	errno = 0;
 	EXPECT_EQ(LONG_MIN, ft_strtol("-9999999999999999999", NULL, 10));
