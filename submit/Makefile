@@ -99,9 +99,6 @@ $(BONUS_RULE): $(BONUS_OBJS)
 	ar rcs $(NAME) $?
 	echo date > $(BONUS_RULE)
 
-%.o: %.c
-	$(CC) $(CFLAGS) -o $@ -c $^
-
 clean:
 	$(RM) $(CLEAN_FILES)
 

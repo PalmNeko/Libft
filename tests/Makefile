@@ -37,8 +37,9 @@ all: $(NAME)
 $(NAME): $(LIBTYCTESTMAIN) $(LIBTYCTEST) $(LIBFT) $(OBJS)
 	$(CC) $(CFLAGS) $(INCS) -o $(NAME) $(OBJS) $(LIBS)
 
-$(LIBFT):
-	make --directory $(shell dirname $(LIBFT))
+$(LIBFT): export CFLAGS := $(CFLAGS)
+$(LIBFT): $(shell find ../submit -name "*.c")
+	"$(MAKE)" --directory $(shell dirname $(LIBFT))
 
 $(LIBTYCTEST) $(LIBTYCTESTMAIN) $(LIBTYCTEST_INCDIR):
 	git clone git@github.com:PalmNeko/tyCtest_tool.git tyCtest_tool
