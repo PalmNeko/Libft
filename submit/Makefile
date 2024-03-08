@@ -66,7 +66,8 @@ MY_SRC = \
 	ft_isupper.c \
 	ft_islower.c \
 	ft_strtol.c \
-	ft_ultoa_base_str.c
+	ft_ultoa_base_str.c \
+	ft_ltoa_inplace.c
 
 BONUS = \
 	ft_lstnew_bonus.c \
