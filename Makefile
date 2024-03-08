@@ -8,6 +8,10 @@ help: ## Show options
 test: ## Run tests
 	make --directory test test
 
+.PHONY: check-tests
+check-tests: ## Check have testfiles
+	@bash scripts/check-have-testfiles.sh
+
 .PHONY: clean
 clean: ## Run clean
 	find . -name "*.o" -delete
