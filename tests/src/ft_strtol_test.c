@@ -68,7 +68,9 @@ TEST(ft_strtol, endptr_check)
 	EXPECT_EQ(nptr, endptr);
 }
 
-TEST(ft_strtol, boundary_value_64bit)
+#if LONG_MAX == 2147483647
+
+TEST(ft_strtol, boundary_value)
 {
 	EXPECT_EQ(0, ft_strtol("0", NULL, 10));
 	EXPECT_EQ(0, ft_strtol("0", NULL, 10));
@@ -82,6 +84,32 @@ TEST(ft_strtol, boundary_value_64bit)
 	EXPECT_EQ(LONG_MIN, ft_strtol("-9999999999999999999", NULL, 10));
 }
 
+#elif LONG_MAX == 9223372036854775807
+
+TEST(ft_strtol, boundary_value)
+{
+	char	value[32];
+
+	EXPECT_EQ(0, ft_strtol("0", NULL, 10));
+	EXPECT_EQ(0, ft_strtol("0", NULL, 10));
+	EXPECT_EQ(LONG_MAX - 1, ft_strtol("9223372036854775806", NULL, 10));
+	EXPECT_EQ(LONG_MAX, ft_strtol("9223372036854775807", NULL, 10));
+	EXPECT_EQ(LONG_MAX, ft_strtol("9223372036854775808", NULL, 10));
+	EXPECT_EQ(LONG_MAX, ft_strtol("9999999999999999999", NULL, 10));
+	EXPECT_EQ(LONG_MIN + 1, ft_strtol("-9223372036854775807", NULL, 10));
+	EXPECT_EQ(LONG_MIN, ft_strtol("-9223372036854775808", NULL, 10));
+	EXPECT_EQ(LONG_MIN, ft_strtol("-9223372036854775809", NULL, 10));
+	EXPECT_EQ(LONG_MIN, ft_strtol("-9999999999999999999", NULL, 10));
+}
+
+else
+
+TEST(ft_strtol, boundary_value)
+{
+	ASSERT_EQ("You have to write for your boundary_value tests", "NULL");
+}
+
+#endif
 TEST(ft_strtol, errno_check)
 {
 	errno = 0;
