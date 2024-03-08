@@ -6,7 +6,7 @@ help: ## Show options
 
 .PHONY: test
 test: ## Run tests
-	make --directory test test
+	make --directory tests test
 
 .PHONY: check-tests
 check-tests: ## Check have testfiles
