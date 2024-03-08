@@ -24,7 +24,8 @@
 			"regex.h": "c",
 			"libft.h": "c",
 			"errno.h": "c",
-			"tyctest.h": "c"
+			"tyctest.h": "c",
+			"cstdlib": "c"
 		}
 	}
 }
