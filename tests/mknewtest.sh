@@ -5,7 +5,7 @@ cd $(dirname $0)
 first_file=$(bash ../scripts/check-have-testfiles.sh | tr ' ' '\n' | head --lines=1)
 create_target=$(basename "${first_file%.c}")
 if [[ -z "$create_target" ]] then
-	echo 'require new test name ex: ft_atoi.c -> ft_atoi'
+	echo 'createed all test'
 	exit 1;
 fi
 
@@ -28,7 +28,7 @@ echo "
 #include <errno.h>
 
 TEST($create_target, basic_usage) {
-	EXPECT_STRNE(\"actual\", \"expected\");
+	EXPECT_STRNE(\"expected\", \"actual\");
 }
 " > "src/${create_target}_test.c"
 
