@@ -2,13 +2,22 @@
 
 cd $(dirname $0)
 
-if [[ -z "$1" ]] then
+first_file=$(bash ../scripts/check-have-testfiles.sh | tr ' ' '\n' | head --lines=1)
+create_target=$(basename "${first_file%.c}")
+if [[ -z "$create_target" ]] then
 	echo 'require new test name ex: ft_atoi.c -> ft_atoi'
 	exit 1;
 fi
 
-if [[ ! -f "../submit/$1.c" ]] then
-	echo "no such file: ../submit/$1.c"
+printf "Are you sure creating? target: $create_target (y/n) "
+read YN
+if [[ "$YN" != "y" ]] then
+	echo 'aborting.'
+	exit 1
+fi
+
+if [[ ! -f "../submit/$create_target.c" ]] then
+	echo "no such file: ../submit/$create_target.c"
 	exit 1;
 fi
 
@@ -18,10 +27,10 @@ echo "
 #include <limits.h>
 #include <errno.h>
 
-TEST($1, basic_usage) {
+TEST($create_target, basic_usage) {
 	EXPECT_STRNE(\"actual\", \"expected\");
 }
-" > "src/$1_test.c"
+" > "src/${create_target}_test.c"
 
-code "src/$1_test.c"
-code "../submit/$1.c"
+code "src/${create_target}_test.c"
+code "../submit/${create_target}.c"
