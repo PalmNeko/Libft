@@ -20,22 +20,7 @@ void print_as_double(void *value);
 void print_as_char(void *value);
 void print_as_char_pointer(void *value);
 void print_as_const_char_pointer(void *value);
-
-#define PRINT_AS_FUNC(VAR) _Generic((VAR), \
-	bool: print_as_bool, \
-	short: print_as_short, \
-	int: print_as_int, \
-	long: print_as_long, \
-	long long: print_as_long_long, \
-	unsigned int: print_as_unsigned_int, \
-	unsigned long: print_as_unsigned_long, \
-	unsigned long long: print_as_unsigned_long_long, \
-	float: print_as_float, \
-	double: print_as_double, \
-	char: print_as_char, \
-	char *: print_as_char_pointer, \
-	const char *: print_as_const_char_pointer \
-)
+void print_as_void_pointer(void *value);
 
 /**
  * assigners
@@ -53,6 +38,7 @@ void	*assign_double(void **variable, double value);
 void	*assign_char(void **variable, char value);
 void	*assign_char_pointer(void **variable, char *value);
 void	*assign_const_char_pointer(void **variable, const char *value);
+void	*assign_void_pointer(void **variable, void *value);
 
 #define ASSIGN(VAL) _Generic((VAL), \
 	bool: assign_bool, \
@@ -67,7 +53,9 @@ void	*assign_const_char_pointer(void **variable, const char *value);
 	double: assign_double, \
 	char: assign_char, \
 	char *: assign_char_pointer, \
-	const char *: assign_const_char_pointer)
+	const char *: assign_const_char_pointer, \
+	default: assign_void_pointer \
+)
 
 #define GET_TYPE(VAR) _Generic((VAR), \
 	bool: "bool", \
@@ -82,7 +70,8 @@ void	*assign_const_char_pointer(void **variable, const char *value);
 	double: "double", \
 	char: "char", \
 	char *: "char *", \
-	const char *: "const char *" \
+	const char *: "const char *", \
+	default: "void *" \
 )
 
 /**
@@ -101,7 +90,8 @@ void	*assign_const_char_pointer(void **variable, const char *value);
 	double: *(double *)VAR_VOID_PTR, \
 	char: *(char *)VAR_VOID_PTR, \
 	char *: (char *)VAR_VOID_PTR, \
-	const char *: (const char *)VAR_VOID_PTR \
+	const char *: (const char *)VAR_VOID_PTR, \
+	default: VAR_VOID_PTR \
 )
 
 /**
