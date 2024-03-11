@@ -2,21 +2,21 @@
 
 cd $(dirname $0)
 
-first_file=$(bash ../scripts/check-have-testfiles.sh | tr ' ' '\n' | head --lines=1)
+first_file=$(bash ../scripts/check-have-testfiles.sh | tr ' ' '\n' | head -n 1)
 create_target=$(basename "${first_file%.c}")
-if [[ -z "$create_target" ]] then
+if test -z "$create_target" && true; then
 	echo 'createed all test'
 	exit 1;
 fi
 
 printf "Are you sure creating? target: $create_target (y/n) "
 read YN
-if [[ "$YN" != "y" ]] then
+if test "$YN" != "y"; then
 	echo 'aborting.'
 	exit 1
 fi
 
-if [[ ! -f "../submit/$create_target.c" ]] then
+if test ! -f "../submit/$create_target.c"; then
 	echo "no such file: ../submit/$create_target.c"
 	exit 1;
 fi
@@ -32,5 +32,7 @@ TEST($create_target, basic_usage) {
 }
 " > "src/${create_target}_test.c"
 
-code "src/${create_target}_test.c"
-code "../submit/${create_target}.c"
+echo
+echo "target:    ../submit/${create_target}.c"
+echo "generated: src/${create_target}_test.c"
+echo
