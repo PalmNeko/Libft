@@ -1,0 +1,3 @@
+{
+	"codam-norminette-3.regex": "(?<!_test)\\.[ch]$"
+}
