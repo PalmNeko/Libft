@@ -70,7 +70,7 @@ TEST(ft_atoi, boundary_value)
 	EXPECT_EQ((int)(LONG_MIN), ft_atoi("-9999999999999999999"));
 }
 
-else
+#else
 
 TEST(ft_atoi, boundary_value)
 {
