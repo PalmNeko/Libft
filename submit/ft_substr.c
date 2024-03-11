@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tookuyam <tookuyam@student.42tokyo.jp>     +#+  +:+       +#+        */
+/*   By: tookuyam <tookuyam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/05 17:42:09 by tookuyam          #+#    #+#             */
-/*   Updated: 2023/10/16 18:36:51 by tookuyam         ###   ########.fr       */
+/*   Updated: 2024/03/11 18:04:04 by tookuyam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,13 @@
 #include <stdlib.h>
 #include <stddef.h>
 
+/**
+ * @brief Cuts `length` from the `start`th string of the string `s`.
+ * @param s - target string.
+ * @param start - start index.
+ * @param len - The length of the character to be cut.
+ * @return Allocated cutted string.
+ */
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	char	*sub;
