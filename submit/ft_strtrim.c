@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tookuyam <tookuyam@student.42tokyo.jp>     +#+  +:+       +#+        */
+/*   By: tookuyam <tookuyam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/06 16:21:53 by tookuyam          #+#    #+#             */
-/*   Updated: 2023/10/16 18:01:11 by tookuyam         ###   ########.fr       */
+/*   Updated: 2024/03/11 17:54:22 by tookuyam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,31 @@ static int	is_includes(char c, char const *set);
 static char	*strskip(char const *s1, char const *set);
 static char	*strrskip(char const *s1, char const *set);
 
+/**
+ * @brief Allocates (with malloc(3)) and returns a copy of
+ * ’s1’ with the characters specified in ’set’ removed
+ * from the beginning and the end of the string.
+ * @param s1 - The string to be trimmed.
+ * @param set - The reference set of characters to trim.
+ * @return The trimmed string.
+ * NULL if the allocation fails.
+ * @example
+ * ```
+ * #include "libft.h"
+ * #include <stdlib.h>
+ *
+ * ...
+ *
+ * char	*trimmed;
+ * trimmed = ft_strtrim("''abc','def''", "',"); // will be return `abc'.'def`
+ * if (trimmed == NULL)
+ * 	return ;
+ *
+ * ...
+ *
+ * free(trimmed);
+ * ```
+ */
 char	*ft_strtrim(char const *s1, char const *set)
 {
 	char	*trim;
