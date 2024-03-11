@@ -11,7 +11,6 @@ static void	count_up(void *content)
 		g_value = 0;
 	else
 	{
-		ft_putnbr_fd(*(int *)content, 1);
 		g_value += *(int *)content;
 	}
 	return ;
