@@ -3,15 +3,25 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tookuyam <tookuyam@student.42tokyo.jp>     +#+  +:+       +#+        */
+/*   By: tookuyam <tookuyam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/27 17:26:53 by tookuyam          #+#    #+#             */
-/*   Updated: 2023/10/16 16:30:38 by tookuyam         ###   ########.fr       */
+/*   Updated: 2024/03/11 15:22:12 by tookuyam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stddef.h>
 
+/**
+ * @brief copies n bytes from memory area src to memory area dst.
+ * @attention If dst and src overlap, behavior is undefined.
+ * Applications in which dst and src might overlap should use memmove(3)
+ * instead.
+ * @param dst - copied memory
+ * @param src - copy source
+ * @param n - copy byte size
+ * @return original value of dst.
+ */
 void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
 	size_t		copy_count;
