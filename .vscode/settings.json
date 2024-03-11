@@ -1,3 +1,6 @@
 {
-	"codam-norminette-3.regex": "(?<!_test)\\.[ch]$"
+	"codam-norminette-3.regex": "(?<!_test)\\.[ch]$",
+	"files.associations": {
+		"*.h": "c"
+	}
 }
