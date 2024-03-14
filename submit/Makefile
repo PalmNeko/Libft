@@ -68,7 +68,8 @@ MY_SRC = \
 	ft_strtol.c \
 	ft_ultoa_base_str.c \
 	ft_ltoa_inplace.c \
-	ft_memswap.c
+	ft_memswap.c \
+	ft_selection_sort.c
 
 BONUS = \
 	ft_lstnew_bonus.c \

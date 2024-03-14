@@ -82,6 +82,9 @@ int		ft_islower(int c);
 int		ft_isupper(int c);
 char	*ft_ultoa_base_str(unsigned long n, const char *base_str);
 char	*ft_ltoa_inplace(long value, char *buffer, int radix);
-int	ft_memswap(void *value1, void *value2, size_t size);
+int		ft_memswap(void *value1, void *value2, size_t size);
+
+void	ft_selection_sort(void *base, size_t num, size_t size,
+			int (*f_cmp)(const void *n1, const void *n2));
 
 #endif
