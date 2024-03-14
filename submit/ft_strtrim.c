@@ -20,7 +20,7 @@ static char	*strrskip(char const *s1, char const *set);
 
 /**
  * @brief Allocates (with malloc(3)) and returns a copy of
- * ’s1’ with the characters specified in ’set’ removed
+ * 's1' with the characters specified in 'set' removed
  * from the beginning and the end of the string.
  * @param s1 - The string to be trimmed.
  * @param set - The reference set of characters to trim.

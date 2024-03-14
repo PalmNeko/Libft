@@ -21,8 +21,8 @@
  * @return Returns zero if the two strings are identical.
  * Returns the difference between the first two differing bytes.
  * Zero-length strings are always identical.
- * @attention `Zero-length strings are always identical.` is not required by C and
- * portable code should only depend on the sign of the returned value.
+ * @attention `Zero-length strings are always identical.` is not required by
+ * C and portable code should only depend on the sign of the returned value.
  */
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {

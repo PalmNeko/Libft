@@ -22,7 +22,7 @@ static int	include_base(char chr, int base);
 
 long	ft_strtol(const char *str, char **endptr, int base)
 {
-	long		ret;
+	long	ret;
 	char	**iter;
 
 	if (str == NULL)
