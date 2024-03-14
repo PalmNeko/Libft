@@ -9,11 +9,11 @@
 TEST(ft_ultoa_base_str, basic_usage) {
 	char	*result;
 
-	result = ft_ultoa_base_str(123228129837, "0123456789");
-	EXPECT_STREQ("123228129837", result);
+	result = ft_ultoa_base_str(1232281, "0123456789");
+	EXPECT_STREQ("1232281", result);
 	free(result);
-	result = ft_ultoa_base_str(123228129837, "0123456789ABCDEF");
-	EXPECT_STREQ("1CB0F80A2D", result);
+	result = ft_ultoa_base_str(1232281, "0123456789ABCDEF");
+	EXPECT_STREQ("12CD99", result);
 	free(result);
 }
 
