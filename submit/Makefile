@@ -50,7 +50,12 @@ SRCS = \
 	ft_putstr_fd.c \
 	ft_putendl_fd.c \
 	ft_putnbr_fd.c \
-	$(MY_SRC)
+	$(MY_SRC) \
+	$(GET_NEXT_LINE_SRC)
+
+GET_NEXT_LINE_SRC = \
+	get_next_line_utils.c \
+	get_next_line.c
 
 MY_SRC = \
 	ft_strnlen.c \
