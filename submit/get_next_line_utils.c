@@ -35,7 +35,7 @@ void	*free_manager(char **str1)
 	return (NULL);
 }
 
-char	*ft_strchr(const char *s, char find)
+char	*ft_strchr(const char *s, int find)
 {
 	while (*s != '\0')
 	{

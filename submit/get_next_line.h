@@ -26,7 +26,7 @@ char		*ft_substrchr(char const *str, char sep);
 
 size_t		ft_strlenchr(char const *s, char find);
 void		*free_manager(char **str);
-char		*ft_strchr(const char *s, char find);
+char		*ft_strchr(const char *s, int find);
 char		*read_str(int fd);
 
 #endif
