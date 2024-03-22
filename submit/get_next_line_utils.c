@@ -35,19 +35,6 @@ void	*free_manager(char **str1)
 	return (NULL);
 }
 
-char	*ft_strchr(const char *s, int find)
-{
-	while (*s != '\0')
-	{
-		if (*s == find)
-			return ((char *)s);
-		s++;
-	}
-	if (*s == find)
-		return ((char *)s);
-	return (NULL);
-}
-
 char	*read_str(int fd)
 {
 	char	*buf;
