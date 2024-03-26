@@ -34,8 +34,7 @@ void	ft_selection_sort(void *base, size_t num, size_t size,
 				min_ptr = data + (iterator * size);
 			iterator++;
 		}
-		if (ft_memswap(min_ptr, data + (target * size), size) < 0)
-			return ;
+		ft_memswap(min_ptr, data + (target * size), size);
 		target++;
 	}
 }
