@@ -19,17 +19,26 @@
  * @param value2 one value
  * @param size size value1 and value2 [byte]
  * @return return 0 if success. return -1 if occured error.
+ * never occur error, so return value is useless.
  */
 int	ft_memswap(void *value1, void *value2, size_t size)
 {
-	void	*tmp;
+	size_t			index;
+	unsigned char	*v1;
+	unsigned char	*v2;
 
-	tmp = malloc(size);
-	if (tmp == NULL)
-		return (-1);
-	ft_memcpy(tmp, value1, size);
-	ft_memcpy(value1, value2, size);
-	ft_memcpy(value2, tmp, size);
-	free(tmp);
+	v1 = value1;
+	v2 = value2;
+	index = 0;
+	while (index < size)
+	{
+		if (ft_memcmp(v1, v2, size) != 0)
+		{
+			v1[index] ^= v2[index];
+			v2[index] ^= v1[index];
+			v1[index] ^= v2[index];
+		}
+		index += 1;
+	}
 	return (0);
 }
