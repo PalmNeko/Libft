@@ -62,6 +62,7 @@ MY_SRC = \
 	ft_strnlen.c \
 	ft_strndup.c \
 	ft_abs.c \
+	ft_bsearch.c \
 	ft_strrev.c \
 	ft_swap_chr.c \
 	ft_utoa.c \
