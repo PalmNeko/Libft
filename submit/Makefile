@@ -31,6 +31,7 @@ SRCS = \
 	ft_tolower.c \
 	ft_strchr.c \
 	ft_strrchr.c \
+	ft_strcmp.c \
 	ft_strncmp.c \
 	ft_memchr.c \
 	ft_memcmp.c \
@@ -50,12 +51,18 @@ SRCS = \
 	ft_putstr_fd.c \
 	ft_putendl_fd.c \
 	ft_putnbr_fd.c \
-	$(MY_SRC)
+	$(MY_SRC) \
+	$(GET_NEXT_LINE_SRC)
+
+GET_NEXT_LINE_SRC = \
+	get_next_line_utils.c \
+	get_next_line.c
 
 MY_SRC = \
 	ft_strnlen.c \
 	ft_strndup.c \
 	ft_abs.c \
+	ft_bsearch.c \
 	ft_strrev.c \
 	ft_swap_chr.c \
 	ft_utoa.c \
@@ -67,7 +74,9 @@ MY_SRC = \
 	ft_islower.c \
 	ft_strtol.c \
 	ft_ultoa_base_str.c \
-	ft_ltoa_inplace.c
+	ft_ltoa_inplace.c \
+	ft_memswap.c \
+	ft_selection_sort.c
 
 BONUS = \
 	ft_lstnew_bonus.c \

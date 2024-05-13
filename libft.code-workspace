@@ -14,18 +14,8 @@
 			"**/Thumbs.db": true,
 		},
 		"files.associations": {
-			"limits.h": "c",
-			"stddef.h": "c",
-			"mm_malloc.h": "c",
-			"stdlib.h": "c",
-			"stdint.h": "c",
-			"libc.h": "c",
-			"stdio.h": "c",
-			"regex.h": "c",
-			"libft.h": "c",
-			"errno.h": "c",
-			"tyctest.h": "c",
-			"cstdlib": "c"
-		}
+			"*.h": "c",
+		},
+		"search.useIgnoreFiles": true
 	}
 }
