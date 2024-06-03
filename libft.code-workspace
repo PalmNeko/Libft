@@ -16,6 +16,10 @@
 		"files.associations": {
 			"*.h": "c",
 		},
-		"search.useIgnoreFiles": true
+		"search.useIgnoreFiles": true,
+		"explorer.fileNesting.enabled": true,
+		"explorer.fileNesting.patterns": {
+			"lib*.h": "${capture}_*.c, ${capture}_*.h"
+		}
 	}
 }
