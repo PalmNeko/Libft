@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tookuyam <tookuyam@student.42tokyo.jp>     +#+  +:+       +#+        */
+/*   By: tookuyam <tookuyam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/22 17:49:45 by tookuyam          #+#    #+#             */
-/*   Updated: 2023/11/09 15:23:31 by tookuyam         ###   ########.fr       */
+/*   Updated: 2024/06/03 12:39:49 by tookuyam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -105,5 +105,6 @@ int		ft_memswap(void *value1, void *value2, size_t size);
 
 void	ft_selection_sort(void *base, size_t num, size_t size,
 			int (*f_cmp)(const void *n1, const void *n2));
+char	*ft_strrepeat(char *str, unsigned int times);
 
 #endif

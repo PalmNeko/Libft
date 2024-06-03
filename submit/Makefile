@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: tookuyam <tookuyam@student.42tokyo.jp>     +#+  +:+       +#+         #
+#    By: tookuyam <tookuyam@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/09/22 17:19:34 by tookuyam          #+#    #+#              #
-#    Updated: 2023/11/09 14:34:28 by tookuyam         ###   ########.fr        #
+#    Updated: 2024/06/03 12:43:10 by tookuyam         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -76,7 +76,8 @@ MY_SRC = \
 	ft_ultoa_base_str.c \
 	ft_ltoa_inplace.c \
 	ft_memswap.c \
-	ft_selection_sort.c
+	ft_selection_sort.c \
+	ft_strrepeat.c
 
 BONUS = \
 	ft_lstnew_bonus.c \
