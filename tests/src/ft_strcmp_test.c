@@ -5,8 +5,6 @@
 #include <errno.h>
 
 TEST(ft_strcmp, basic_usage) {
-	char	src[] = "abcdefgh";
-
 	EXPECT_EQ(0, ft_strcmp("", ""));
 	EXPECT_EQ(0, ft_strcmp("a", "a"));
 	EXPECT_EQ(0, ft_strcmp("abc", "abc"));
