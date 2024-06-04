@@ -6,7 +6,7 @@
 /*   By: tookuyam <tookuyam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/22 17:49:45 by tookuyam          #+#    #+#             */
-/*   Updated: 2024/06/04 13:53:24 by tookuyam         ###   ########.fr       */
+/*   Updated: 2024/06/04 14:17:44 by tookuyam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define LIBFT_H
 
 # include <stddef.h>
+# include <stdbool.h>
 # include <unistd.h>
 
 typedef struct s_list
@@ -39,6 +40,7 @@ typedef struct s_bsearch_arg {
 	int			(*compar)(const void *, const void *);
 }	t_bsearch_arg;
 
+bool	ft_strincludes(char *texts, char *sets);
 char	**ft_split(char const *s, char c);
 char	*ft_itoa(int n);
 char	*ft_ltoa_inplace(long value, char *buffer, int radix);
