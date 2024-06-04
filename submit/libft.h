@@ -6,7 +6,7 @@
 /*   By: tookuyam <tookuyam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/22 17:49:45 by tookuyam          #+#    #+#             */
-/*   Updated: 2024/06/04 14:17:44 by tookuyam         ###   ########.fr       */
+/*   Updated: 2024/06/04 14:42:35 by tookuyam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,6 +54,8 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len);
 char	*ft_strrchr(const char *s, int c);
 char	*ft_strrepeat(char *str, unsigned int times);
 char	*ft_strrightalign(const char *s1, size_t width);
+char	*ft_strtolower(char *str);
+char	*ft_strtoupper(char *str);
 char	*ft_strtrim(char const *s1, char const *set);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
 char	*ft_ultoa_base_str(unsigned long n, const char *base_str);
