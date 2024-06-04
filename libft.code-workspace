@@ -19,7 +19,9 @@
 		"search.useIgnoreFiles": true,
 		"explorer.fileNesting.enabled": true,
 		"explorer.fileNesting.patterns": {
-			"lib*.h": "${capture}_*.c, ${capture}_*.h"
+			"lib*.h": "${capture}_*.c, ${capture}_*.h",
+			"Makefile": ".*, *.o, *.d, *.gcno",
+			"*.c": "${capture}.o, ${capture}.d, ${capture}.gcno, ${capture}.gcda"
 		},
 		"editor.insertSpaces": false,
 		"files.trimTrailingWhitespace": true,
