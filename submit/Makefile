@@ -6,7 +6,7 @@
 #    By: tookuyam <tookuyam@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/09/22 17:19:34 by tookuyam          #+#    #+#              #
-#    Updated: 2024/06/03 13:23:47 by tookuyam         ###   ########.fr        #
+#    Updated: 2024/06/04 13:54:09 by tookuyam         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -61,6 +61,7 @@ SRCS = \
 	ft_strrchr.c \
 	ft_strrepeat.c \
 	ft_strrev.c \
+	ft_strrightalign.c \
 	ft_strtol.c \
 	ft_strtrim.c \
 	ft_substr.c \
