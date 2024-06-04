@@ -20,7 +20,8 @@
 		"explorer.fileNesting.enabled": true,
 		"explorer.fileNesting.patterns": {
 			"lib*.h": "${capture}_*.c, ${capture}_*.h",
-			"Makefile": ".*, *.o, *.d, *.gcno, *.gcda"
+			"Makefile": ".*, *.o, *.d, *.gcno, *.gcda",
+			".artifacts": ".*, *.o, *.d, *.gcno, *.gcda",
 		},
 		"editor.insertSpaces": false,
 		"files.trimTrailingWhitespace": true,

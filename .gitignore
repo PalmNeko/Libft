@@ -10,3 +10,4 @@ libft_test
 *.gcov
 *.gcno
 *.gcda
+.artifacts
