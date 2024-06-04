@@ -6,7 +6,7 @@
 /*   By: tookuyam <tookuyam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/22 17:49:45 by tookuyam          #+#    #+#             */
-/*   Updated: 2024/06/03 12:52:10 by tookuyam         ###   ########.fr       */
+/*   Updated: 2024/06/03 13:03:06 by tookuyam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,6 +45,7 @@ char	*ft_ltoa_inplace(long value, char *buffer, int radix);
 char	*ft_strchr(const char *s, int c);
 char	*ft_strdup(const char *s1);
 char	*ft_strjoin(const char *s1, const char *s2);
+char	*ft_strleftalign(const char *s1, size_t width);
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 char	*ft_strndup(const char *s1, size_t n);
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len);

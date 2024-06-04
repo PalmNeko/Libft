@@ -6,7 +6,7 @@
 #    By: tookuyam <tookuyam@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/09/22 17:19:34 by tookuyam          #+#    #+#              #
-#    Updated: 2024/06/03 12:49:26 by tookuyam         ###   ########.fr        #
+#    Updated: 2024/06/03 13:23:47 by tookuyam         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -30,15 +30,6 @@ SRCS = \
 	ft_isspace.c \
 	ft_isupper.c \
 	ft_itoa.c \
-	ft_lstadd_back_bonus. \c
-	ft_lstadd_front_bonus \.c
-	ft_lstclear_bonus.c \
-	ft_lstdelone_bonus.c \
-	ft_lstiter_bonus.c \
-	ft_lstlast_bonus.c \
-	ft_lstmap_bonus.c \
-	ft_lstnew_bonus.c \
-	ft_lstsize_bonus.c \
 	ft_ltoa_inplace.c \
 	ft_memchr.c \
 	ft_memcmp.c \
@@ -60,6 +51,7 @@ SRCS = \
 	ft_strjoin.c \
 	ft_strlcat.c \
 	ft_strlcpy.c \
+	ft_strleftalign.c \
 	ft_strlen.c \
 	ft_strmapi.c \
 	ft_strncmp.c \
@@ -79,8 +71,7 @@ SRCS = \
 	ft_utoa.c \
 	ft_utoa_base.c \
 	get_next_line.c \
-	get_next_line_utils.c \
-
+	get_next_line_utils.c
 
 BONUS = \
 	ft_lstnew_bonus.c \
@@ -118,6 +109,15 @@ clean:
 
 fclean: clean
 	$(RM) $(NAME)
+
+show:
+	@printf "NAME  		: $(NAME)\n"
+	@printf "CC		: $(CC)\n"
+	@printf "CFLAGS		: $(CFLAGS)\n"
+	@printf "LDLIBS		: $(LDLIBS)\n"
+	@printf "SRCS		:\n	$(SRCS)\n"
+	@printf "OBJS		:\n	$(OBJS)\n"
+	@printf "BONUS		:\n	$(BONUS)\n"
 
 re: fclean all
 
