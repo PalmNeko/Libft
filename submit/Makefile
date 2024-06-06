@@ -6,7 +6,7 @@
 #    By: tookuyam <tookuyam@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/09/22 17:19:34 by tookuyam          #+#    #+#              #
-#    Updated: 2024/06/04 15:45:35 by tookuyam         ###   ########.fr        #
+#    Updated: 2024/06/06 11:41:34 by tookuyam         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -55,6 +55,7 @@ SRCS = \
 	ft_strlcpy.c \
 	ft_strleftalign.c \
 	ft_strlen.c \
+	ft_strmatch.c \
 	ft_strmapi.c \
 	ft_strncmp.c \
 	ft_strndup.c \
