@@ -6,7 +6,7 @@
 /*   By: tookuyam <tookuyam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/22 17:49:45 by tookuyam          #+#    #+#             */
-/*   Updated: 2024/06/06 11:41:42 by tookuyam         ###   ########.fr       */
+/*   Updated: 2024/06/06 15:23:14 by tookuyam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,6 +81,7 @@ int		ft_strncmp(const char *s1, const char *s2, size_t n);
 int		ft_tolower(int c);
 int		ft_toupper(int c);
 long	ft_add_l(long value, long add_value);
+long	ft_ifl(bool condition, long iftrue, long iffalse);
 long	ft_mul_l(long value, long mul_value);
 long	ft_strtol(const char *str, char **endptr, int base);
 size_t	ft_putstr_fd(const char *s, int fd);
