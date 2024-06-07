@@ -6,7 +6,7 @@
 /*   By: tookuyam <tookuyam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/22 17:49:45 by tookuyam          #+#    #+#             */
-/*   Updated: 2024/06/07 17:37:38 by tookuyam         ###   ########.fr       */
+/*   Updated: 2024/06/07 18:49:40 by tookuyam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,12 @@ typedef struct s_list
 	void			*content;
 	struct s_list	*next;
 }	t_list;
+
+typedef struct s_free_args
+{
+	void	(*free_func)();
+	void	*arg;
+}	t_free_args;
 
 /**
  * @param key search keywoad pointer
@@ -102,6 +108,7 @@ void	*ft_memmove(void *dst, const void *src, size_t len);
 void	*ft_memset(void *b, int c, size_t len);
 void	*ft_realloc(void *ptr, size_t old_size, size_t size);
 void	ft_bzero(void *s, size_t n);
+void	ft_free_iter(t_free_args *free_args, size_t size);
 void	ft_lstadd_back(t_list **lst, t_list *new);
 void	ft_lstadd_front(t_list **lst, t_list *new);
 void	ft_lstclear(t_list **lst, void (*del)(void *));
