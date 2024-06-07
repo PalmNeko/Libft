@@ -6,7 +6,7 @@
 /*   By: tookuyam <tookuyam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/22 17:49:45 by tookuyam          #+#    #+#             */
-/*   Updated: 2024/06/07 16:56:24 by tookuyam         ###   ########.fr       */
+/*   Updated: 2024/06/07 17:37:38 by tookuyam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -100,6 +100,7 @@ void	*ft_memchr(const void *s, int c, size_t n);
 void	*ft_memcpy(void *dst, const void *src, size_t n);
 void	*ft_memmove(void *dst, const void *src, size_t len);
 void	*ft_memset(void *b, int c, size_t len);
+void	*ft_realloc(void *ptr, size_t old_size, size_t size);
 void	ft_bzero(void *s, size_t n);
 void	ft_lstadd_back(t_list **lst, t_list *new);
 void	ft_lstadd_front(t_list **lst, t_list *new);
