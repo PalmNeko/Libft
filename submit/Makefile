@@ -17,6 +17,7 @@ CFLAGS += -MP -MMD
 SRCS = \
 	ft_abs.c \
 	ft_add_l.c \
+	ft_array_to_lst.c \
 	ft_atoi.c \
 	ft_bsearch.c \
 	ft_bzero.c \
