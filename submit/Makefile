@@ -6,7 +6,7 @@
 #    By: tookuyam <tookuyam@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/09/22 17:19:34 by tookuyam          #+#    #+#              #
-#    Updated: 2024/06/07 18:44:38 by tookuyam         ###   ########.fr        #
+#    Updated: 2024/06/09 14:18:34 by tookuyam         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -35,6 +35,7 @@ SRCS = \
 	ft_isupper.c \
 	ft_itoa.c \
 	ft_ltoa_inplace.c \
+	ft_lst_to_array.c \
 	ft_lstdel_content.c \
 	ft_memchr.c \
 	ft_memcmp.c \
