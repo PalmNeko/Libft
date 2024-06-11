@@ -3,14 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strrepeat.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tookuyam <tookuyam@student.42.fr>          +#+  +:+       +#+        */
+/*   By: tookuyam <tookuyam@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/03 12:24:58 by tookuyam          #+#    #+#             */
-/*   Updated: 2024/06/03 12:39:16 by tookuyam         ###   ########.fr       */
+/*   Updated: 2024/06/11 23:08:18 by tookuyam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
+#include <stdint.h>
 #include "libft.h"
 
 /**
