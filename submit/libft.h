@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tookuyam <tookuyam@student.42.fr>          +#+  +:+       +#+        */
+/*   By: tookuyam <tookuyam@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/22 17:49:45 by tookuyam          #+#    #+#             */
-/*   Updated: 2024/06/09 14:20:14 by tookuyam         ###   ########.fr       */
+/*   Updated: 2024/06/11 23:05:47 by tookuyam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -127,5 +127,6 @@ void	ft_selection_sort(
 void	ft_striteri(char *s, void (*f)(unsigned int, char *));
 void	ft_strrev(char *str);
 void	ft_swap_chr(char *a, char *b);
+void	ft_voidnop(void);
 
 #endif
