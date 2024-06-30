@@ -1,4 +1,9 @@
 
+libft.a:
+	make -C submit
+	cp ./submit/libft.a .
+	cp ./submit/libft.h .
+
 .PHONY: help
 help: ## Show options
 	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | \
@@ -21,3 +26,6 @@ clean: ## Run clean
 	find . -name "*.gcov" -delete
 	find . -name "*.gcno" -delete
 	find . -name "*.gcda" -delete
+
+fclean: clean
+	rm -rf libft.a

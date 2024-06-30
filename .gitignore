@@ -1,6 +1,7 @@
 
 # projects
 libft_test
+/libft.h
 
 # for language C
 *.o
