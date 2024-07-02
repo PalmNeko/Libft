@@ -6,7 +6,7 @@
 #    By: tookuyam <tookuyam@42.student.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/09/22 17:19:34 by tookuyam          #+#    #+#              #
-#    Updated: 2024/07/02 16:45:27 by tookuyam         ###   ########.fr        #
+#    Updated: 2024/07/02 17:21:03 by tookuyam         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -44,6 +44,7 @@ SRCS = \
 	ft_memmove.c \
 	ft_memset.c \
 	ft_memswap.c \
+	ft_mkostemp.c \
 	ft_mul_l.c \
 	ft_nop.c \
 	ft_putchar_fd.c \

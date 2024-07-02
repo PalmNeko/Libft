@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_mkotemp.c                                       :+:      :+:    :+:   */
+/*   ft_mkostemp.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tookuyam <tookuyam@42.student.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/02 15:20:34 by tookuyam          #+#    #+#             */
-/*   Updated: 2024/07/02 16:45:12 by tookuyam         ###   ########.fr       */
+/*   Updated: 2024/07/02 17:20:13 by tookuyam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,9 @@
 #include <fcntl.h>
 #include "libft.h"
 
-int	ft_mkostemp(char *template)
+int	ft_mkostemp(char *template, int flags)
 {
 	size_t		len;
-	char		*rep_start;
 	int			index;
 	int			fd;
 
@@ -31,14 +30,14 @@ int	ft_mkostemp(char *template)
 		errno = EINVAL;
 		return (-1);
 	}
-	rep_start = &template[len - 6];
+	flags |= O_RDWR | O_CREAT | O_EXCL;
 	index = 0;
 	while (index < 10)
 	{
 		errno = 0;
 		ft_replace_random_alpha(
-			rep_start, 6, ft_addr2uint32_t(template), 6 * index);
-		fd = open(template, O_RDWR | O_CREAT | O_EXCL, S_IWUSR | S_IRUSR);
+			&template[len - 6], 6, ft_addr2uint32_t(template), 6 * index);
+		fd = open(template, flags, S_IWUSR | S_IRUSR);
 		if (fd != -1 || (fd == -1 && errno != EEXIST))
 			return (fd);
 		index++;
