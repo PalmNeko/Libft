@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: tookuyam <tookuyam@student.42tokyo.jp>     +#+  +:+       +#+         #
+#    By: tookuyam <tookuyam@42.student.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/09/22 17:19:34 by tookuyam          #+#    #+#              #
-#    Updated: 2024/06/11 23:05:58 by tookuyam         ###   ########.fr        #
+#    Updated: 2024/07/02 15:54:01 by tookuyam         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -84,6 +84,7 @@ SRCS = \
 	ft_utoa.c \
 	ft_utoa_base.c \
 	ft_voidnop.c \
+	ft_xorshift_u32.c \
 	get_next_line.c \
 	get_next_line_utils.c
 
