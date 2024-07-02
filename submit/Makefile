@@ -6,7 +6,7 @@
 #    By: tookuyam <tookuyam@42.student.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/09/22 17:19:34 by tookuyam          #+#    #+#              #
-#    Updated: 2024/07/02 15:54:01 by tookuyam         ###   ########.fr        #
+#    Updated: 2024/07/02 16:45:27 by tookuyam         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,6 +17,7 @@ CFLAGS += -MP -MMD
 SRCS = \
 	ft_abs.c \
 	ft_add_l.c \
+	ft_addr2uint32_t.c \
 	ft_array_to_lst.c \
 	ft_atoi.c \
 	ft_bsearch.c \
@@ -50,6 +51,7 @@ SRCS = \
 	ft_putnbr_fd.c \
 	ft_putstr_fd.c \
 	ft_realloc.c \
+	ft_replace_random_alpha.c \
 	ft_selection_sort.c \
 	ft_split.c \
 	ft_strchr.c \

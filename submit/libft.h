@@ -6,7 +6,7 @@
 /*   By: tookuyam <tookuyam@42.student.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/22 17:49:45 by tookuyam          #+#    #+#             */
-/*   Updated: 2024/07/02 15:45:56 by tookuyam         ###   ########.fr       */
+/*   Updated: 2024/07/02 16:44:44 by tookuyam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,6 +53,8 @@ bool		ft_strincludes(char *texts, char *sets);
 char		**ft_split(char const *s, char c);
 char		*ft_itoa(int n);
 char		*ft_ltoa_inplace(long value, char *buffer, int radix);
+char		*ft_replace_random_alpha(
+				char *str, int cnt, uint32_t seed, uint32_t no);
 char		*ft_strchr(const char *s, int c);
 char		*ft_strdup(const char *s1);
 char		*ft_strjoin(const char *s1, const char *s2);
@@ -103,6 +105,7 @@ t_list		*ft_lstlast(t_list *lst);
 t_list		*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 t_list		*ft_lstnew(void *content);
 uint32_t	ft_xorshift_u32(uint32_t seed, uint32_t x);
+uint32_t	ft_addr2uint32_t(void *addr);
 void		**ft_lst_to_array(t_list *lst, size_t *ret_size);
 void		*ft_bsearch(t_bsearch_arg *arg);
 void		*ft_calloc(size_t count, size_t size);
