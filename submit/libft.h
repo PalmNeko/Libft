@@ -6,7 +6,7 @@
 /*   By: tookuyam <tookuyam@42.student.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/22 17:49:45 by tookuyam          #+#    #+#             */
-/*   Updated: 2024/07/02 18:59:16 by tookuyam         ###   ########.fr       */
+/*   Updated: 2024/07/02 19:15:40 by tookuyam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -132,6 +132,7 @@ void		ft_selection_sort(
 				size_t num,
 				size_t size,
 				int (*f_cmp)(const void *n1, const void *n2));
+void		ft_set_errno(int eno);
 void		ft_striteri(char *s, void (*f)(unsigned int, char *));
 void		ft_strrev(char *str);
 void		ft_swap_chr(char *a, char *b);

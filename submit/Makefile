@@ -6,7 +6,7 @@
 #    By: tookuyam <tookuyam@42.student.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/09/22 17:19:34 by tookuyam          #+#    #+#              #
-#    Updated: 2024/07/02 18:59:35 by tookuyam         ###   ########.fr        #
+#    Updated: 2024/07/02 19:16:16 by tookuyam         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -55,6 +55,7 @@ SRCS = \
 	ft_realloc.c \
 	ft_replace_random_alpha.c \
 	ft_selection_sort.c \
+	ft_set_errno.c \
 	ft_split.c \
 	ft_strchr.c \
 	ft_strcmp.c \
