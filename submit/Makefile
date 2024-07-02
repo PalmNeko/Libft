@@ -6,7 +6,7 @@
 #    By: tookuyam <tookuyam@42.student.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/09/22 17:19:34 by tookuyam          #+#    #+#              #
-#    Updated: 2024/07/02 19:16:16 by tookuyam         ###   ########.fr        #
+#    Updated: 2024/07/02 19:32:36 by tookuyam         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,6 +23,7 @@ SRCS = \
 	ft_bsearch.c \
 	ft_bzero.c \
 	ft_calloc.c \
+	ft_errinfo.c \
 	ft_free_iter.c \
 	ft_getenv_value.c \
 	ft_ifl.c \

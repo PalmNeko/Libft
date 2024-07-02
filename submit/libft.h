@@ -6,7 +6,7 @@
 /*   By: tookuyam <tookuyam@42.student.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/22 17:49:45 by tookuyam          #+#    #+#             */
-/*   Updated: 2024/07/02 19:15:40 by tookuyam         ###   ########.fr       */
+/*   Updated: 2024/07/02 19:33:15 by tookuyam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,6 +51,7 @@ bool		ft_includes(char c, char *sets);
 bool		ft_strmatch(char *pattern, char *text);
 bool		ft_strincludes(char *texts, char *sets);
 char		**ft_split(char const *s, char c);
+char		*ft_get_errinfo(void);
 char		*ft_getenv_value(char *key);
 char		*ft_itoa(int n);
 char		*ft_ltoa_inplace(long value, char *buffer, int radix);
@@ -117,6 +118,7 @@ void		*ft_memmove(void *dst, const void *src, size_t len);
 void		*ft_memset(void *b, int c, size_t len);
 void		*ft_realloc(void *ptr, size_t old_size, size_t size);
 void		ft_bzero(void *s, size_t n);
+void		ft_clear_errinfo(void);
 void		ft_free_iter(t_free_args *free_args, size_t size);
 void		ft_lstadd_back(t_list **lst, t_list *new);
 void		ft_lstadd_front(t_list **lst, t_list *new);
@@ -132,6 +134,7 @@ void		ft_selection_sort(
 				size_t num,
 				size_t size,
 				int (*f_cmp)(const void *n1, const void *n2));
+void		ft_set_errinfo(char *einfo);
 void		ft_set_errno(int eno);
 void		ft_striteri(char *s, void (*f)(unsigned int, char *));
 void		ft_strrev(char *str);
