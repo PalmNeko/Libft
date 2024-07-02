@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: tookuyam <tookuyam@student.42tokyo.jp>     +#+  +:+       +#+         #
+#    By: tookuyam <tookuyam@42.student.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/09/22 17:19:34 by tookuyam          #+#    #+#              #
-#    Updated: 2023/10/11 13:11:10 by tookuyam         ###   ########.fr        #
+#    Updated: 2024/07/02 15:55:30 by tookuyam         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,14 +17,10 @@ endif
 
 CC = cc
 
-LIBS = -L ../submit -L ./libs -l ft -l tyctest -l tyctest_main
+LIBS = -L ../submit -L $(LIBTYCTEST) -l ft -l tyctest -l tyctest_main
 LIBFT = ../submit/libft.a
-LIBTYCTEST = ./libs/libtyctest.a
-LIBTYCTESTMAIN = ./libs/libtyctest_main.a
-LIBTYCTEST_INCDIR = ./includes/tyctest
-
-INCS = -I ../submit -I $(LIBTYCTEST_INCDIR)
-CFLAGS += -coverage -g -O0 -Wall -Wextra -Werror -MMD -MP $(INCS)
+LIBTYCTEST = ./tyctest
+CFLAGS += -coverage -g -O0 -Wall -Wextra -Werror -MMD -MP -I ../submit -I $(LIBTYCTEST)
 SRCS = $(shell find . -name "*_test.c")
 OBJS = $(SRCS:.c=.o)
 DEPENDS = $(SRCS:.c=.d)
@@ -35,16 +31,15 @@ all: $(NAME)
 -include $(DEPENDS)
 
 $(NAME): $(LIBTYCTESTMAIN) $(LIBTYCTEST) $(LIBFT) $(OBJS)
-	$(CC) $(CFLAGS) $(INCS) -o $(NAME) $(OBJS) $(LIBS)
+	$(CC) $(CFLAGS) -o $(NAME) $(OBJS) $(LIBS)
 
 $(LIBFT): export CFLAGS := $(CFLAGS)
 $(LIBFT): $(shell find ../submit -name "*.c")
 	"$(MAKE)" --directory $(shell dirname $(LIBFT))
 
-$(LIBTYCTEST) $(LIBTYCTESTMAIN) $(LIBTYCTEST_INCDIR):
-	git clone git@github.com:PalmNeko/tyCtest_tool.git tyCtest_tool
-	bash tyCtest_tool/install.sh
-	rm -rf tyCtest_tool
+$(LIBTYCTEST):
+	git clone git@github.com:PalmNeko/tyctest.git tyctest
+	cd tyctest && make
 
 .PHONY: test
 test: $(NAME)
