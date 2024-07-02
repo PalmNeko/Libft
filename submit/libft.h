@@ -6,7 +6,7 @@
 /*   By: tookuyam <tookuyam@42.student.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/22 17:49:45 by tookuyam          #+#    #+#             */
-/*   Updated: 2024/07/02 17:22:51 by tookuyam         ###   ########.fr       */
+/*   Updated: 2024/07/02 18:59:16 by tookuyam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,6 +51,7 @@ bool		ft_includes(char c, char *sets);
 bool		ft_strmatch(char *pattern, char *text);
 bool		ft_strincludes(char *texts, char *sets);
 char		**ft_split(char const *s, char c);
+char		*ft_getenv_value(char *key);
 char		*ft_itoa(int n);
 char		*ft_ltoa_inplace(long value, char *buffer, int radix);
 char		*ft_replace_random_alpha(
