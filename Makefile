@@ -3,6 +3,7 @@ libft.a:
 	make -C submit
 	cp ./submit/libft.a .
 	cp ./submit/libft.h .
+	cp ./submit/get_next_line.h .
 
 .PHONY: help
 help: ## Show options
