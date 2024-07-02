@@ -12,3 +12,4 @@ libft_test
 *.gcno
 *.gcda
 .artifacts
+/get_next_line.h

@@ -6,7 +6,7 @@
 /*   By: tookuyam <tookuyam@42.student.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/02 15:20:34 by tookuyam          #+#    #+#             */
-/*   Updated: 2024/07/02 17:20:13 by tookuyam         ###   ########.fr       */
+/*   Updated: 2024/07/02 18:35:17 by tookuyam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ int	ft_mkostemp(char *template, int flags)
 	int			fd;
 
 	len = ft_strlen(template);
-	if (len < 6 || ft_strmatch("XXXXXX$", template))
+	if (len < 6 || ! ft_strmatch("XXXXXX$", template))
 	{
 		errno = EINVAL;
 		return (-1);
