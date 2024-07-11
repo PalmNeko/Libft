@@ -6,7 +6,7 @@
 #    By: tookuyam <tookuyam@student.42tokyo.fr>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/09/22 17:19:34 by tookuyam          #+#    #+#              #
-#    Updated: 2024/07/11 15:18:45 by tookuyam         ###   ########.fr        #
+#    Updated: 2024/07/11 16:34:48 by tookuyam         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -141,5 +141,8 @@ show:
 	@printf "BONUS		:\n	$(BONUS)\n"
 
 re: fclean all
+
+debug: CFLAGS  += -g -O0 -fsanitize=leak
+debug: re
 
 .PHONY: all clean fclean re
