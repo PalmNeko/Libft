@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: tookuyam <tookuyam@42.student.fr>          +#+  +:+       +#+         #
+#    By: tookuyam <tookuyam@student.42tokyo.fr>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/09/22 17:19:34 by tookuyam          #+#    #+#              #
-#    Updated: 2024/07/02 19:32:36 by tookuyam         ###   ########.fr        #
+#    Updated: 2024/07/11 15:18:45 by tookuyam         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,7 +25,7 @@ SRCS = \
 	ft_calloc.c \
 	ft_errinfo.c \
 	ft_free_iter.c \
-	ft_getenv_value.c \
+	ft_getenv.c \
 	ft_ifl.c \
 	ft_includes.c \
 	ft_isalnum.c \

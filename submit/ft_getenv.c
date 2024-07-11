@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_getenv_value.c                                  :+:      :+:    :+:   */
+/*   ft_getenv.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tookuyam <tookuyam@42.student.fr>          +#+  +:+       +#+        */
+/*   By: tookuyam <tookuyam@student.42tokyo.fr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/02 18:57:23 by tookuyam          #+#    #+#             */
-/*   Updated: 2024/07/02 18:59:22 by tookuyam         ###   ########.fr       */
+/*   Updated: 2024/07/11 15:25:01 by tookuyam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,27 +15,26 @@
 
 /**
  * @brief get value in memory from environ.environ(7)
- * @param key keyvalue
+ * @param name keyvalue
  */
-char	*ft_getenv_value(char *key)
+char	*ft_getenv(const char *name)
 {
 	extern char	**environ;
+	char		*find_iter;
 	size_t		index;
-	size_t		iter;
 
 	index = 0;
 	while (environ[index] != NULL)
 	{
-		if (ft_strncmp(key, environ[index], ft_strlen(key)) == 0)
+		find_iter = ft_strchr(environ[index], '=');
+		if (find_iter == NULL && ft_strncmp(
+				name, environ[index], find_iter - environ[index]) == 0)
 			break ;
 		index++;
 	}
 	if (environ[index] == NULL)
 		return (NULL);
-	iter = 0;
-	while (environ[index][iter] != '=' && environ[index][iter] != '\0')
-		iter++;
-	if (environ[index][iter] == '\0')
-		return (NULL);
-	return (ft_strdup(environ[index] + iter + 1));
+	if (find_iter != NULL)
+		find_iter += 1;
+	return (find_iter);
 }

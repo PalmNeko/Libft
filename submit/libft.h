@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tookuyam <tookuyam@42.student.fr>          +#+  +:+       +#+        */
+/*   By: tookuyam <tookuyam@student.42tokyo.fr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/22 17:49:45 by tookuyam          #+#    #+#             */
-/*   Updated: 2024/07/02 19:33:15 by tookuyam         ###   ########.fr       */
+/*   Updated: 2024/07/11 15:22:50 by tookuyam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,7 @@ bool		ft_strmatch(char *pattern, char *text);
 bool		ft_strincludes(char *texts, char *sets);
 char		**ft_split(char const *s, char c);
 char		*ft_get_errinfo(void);
-char		*ft_getenv_value(char *key);
+char		*ft_getenv(const char *name);
 char		*ft_itoa(int n);
 char		*ft_ltoa_inplace(long value, char *buffer, int radix);
 char		*ft_replace_random_alpha(
