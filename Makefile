@@ -30,3 +30,5 @@ clean: ## Run clean
 
 fclean: clean
 	rm -rf libft.a
+	rm -rf libft.h
+	rm -rf get_next_line.h
