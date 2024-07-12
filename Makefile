@@ -21,7 +21,6 @@ check-tests: ## Check have testfiles
 .PHONY: clean
 clean: ## Run clean
 	find . -name "*.o" -delete
-	find . -name "*.a" -delete
 	find . -name "*.d" -delete
 	find . -name "*.exe" -delete
 	find . -name "*.gcov" -delete
