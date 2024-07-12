@@ -1,9 +1,17 @@
 
-libft.a:
+
+all: build libft.h libft.a get_next_line.h
+
+%.h: submit/%.h
+	cp $< .
+%.a: submit/%.a
+	cp $< .
+
+submit/%.a: build
+
+.PHONY: build
+build:
 	make -C submit
-	cp ./submit/libft.a .
-	cp ./submit/libft.h .
-	cp ./submit/get_next_line.h .
 
 .PHONY: help
 help: ## Show options
