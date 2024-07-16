@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstiter.c                                       :+:      :+:    :+:   */
+/*   ft_lstiter_bonus.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tookuyam <tookuyam@student.42tokyo.jp>     +#+  +:+       +#+        */
+/*   By: tookuyam <tookuyam@student.42tokyo.fr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/09 15:43:22 by tookuyam          #+#    #+#             */
-/*   Updated: 2023/10/09 15:50:55 by tookuyam         ###   ########.fr       */
+/*   Updated: 2024/07/16 15:31:46 by tookuyam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,19 @@
 
 void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
-	while (lst != NULL)
+	t_list	*iter;
+
+	if (lst == NULL)
+		return ;
+	if (lst->prev != NULL)
+		lst->prev->next = NULL;
+	iter = lst;
+	while (iter != NULL)
 	{
-		f(lst->content);
-		lst = lst->next;
+		f(iter->content);
+		iter = iter->next;
 	}
+	if (lst->prev != NULL)
+		lst->prev->next = lst;
 	return ;
 }
