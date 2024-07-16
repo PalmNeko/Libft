@@ -25,4 +25,5 @@ TEST(ft_lst_to_array, basic_usage)
 	EXPECT_EQ(*values[1], 2);
 	EXPECT_EQ(*values[2], 3);
 	free(values);
+	ft_lstclear(&lst, (void(*)(void *))ft_voidnop);
 }

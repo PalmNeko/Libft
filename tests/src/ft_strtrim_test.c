@@ -20,8 +20,10 @@ TEST(ft_strtrim, basic_usage) {
 	free(trimmed);
 	trimmed = ft_strtrim("", ", '");
 	EXPECT_STREQ("", trimmed);
+	free(trimmed);
 	trimmed = ft_strtrim(",','", ", '");
 	EXPECT_STREQ("", trimmed);
+	free(trimmed);
 	trimmed = ft_strtrim(",,''", ", '");
 	EXPECT_STREQ("", trimmed);
 	free(trimmed);

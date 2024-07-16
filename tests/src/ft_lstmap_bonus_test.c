@@ -39,4 +39,5 @@ TEST(ft_lstmap_bonus, basic_usage)
 	EXPECT_EQ(2, g_called_cnt);
 	EXPECT_EQ(1, *(int *)squared_root->content);
 	EXPECT_EQ(9, *(int *)squared_root->next->content);
+	ft_lstclear(&squared_root, _del_func);
 }

@@ -3,6 +3,7 @@
 #include "libft.h"
 #include <limits.h>
 #include <errno.h>
+#include <stdlib.h>
 
 static int	g_cnt;
 static unsigned int	g_indexes[6];
@@ -21,6 +22,7 @@ TEST(ft_strmapi, basic_usage) {
 
 	result = ft_strmapi("abcde", _toupper_iteri);
 	EXPECT_STREQ("ABCDE", result);
+	free(result);
 	EXPECT_EQ((unsigned int)0, g_indexes[0]);
 	EXPECT_EQ((unsigned int)1, g_indexes[1]);
 	EXPECT_EQ((unsigned int)2, g_indexes[2]);
