@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstdel_content.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tookuyam <tookuyam@student.42tokyo.fr>     +#+  +:+       +#+        */
+/*   By: tookuyam <tookuyam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/07 16:22:12 by tookuyam          #+#    #+#             */
-/*   Updated: 2024/07/12 14:56:57 by tookuyam         ###   ########.fr       */
+/*   Updated: 2024/07/16 20:36:37 by tookuyam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,9 +24,7 @@ void	ft_lstdel_content(t_list **root, void *content, void (*del)(void *))
 {
 	t_list	*itr;
 	t_list	*new_root;
-	t_list	*pre;
 
-	pre = NULL;
 	itr = *root;
 	while (itr != NULL)
 	{
@@ -40,7 +38,6 @@ void	ft_lstdel_content(t_list **root, void *content, void (*del)(void *))
 			ft_lstdelone(itr, del);
 			return ;
 		}
-		pre = itr;
 		itr = itr->next;
 	}
 	return ;

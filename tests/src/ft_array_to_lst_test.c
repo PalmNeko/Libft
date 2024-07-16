@@ -17,6 +17,6 @@ TEST(ft_array_to_lst, basic_usage) {
 	EXPECT_EQ(*(int *)lst->content, 1);
 	EXPECT_EQ(*(int *)lst->next->content, 2);
 	EXPECT_EQ(*(int *)lst->next->next->content, 3);
-	ft_lstclear(&lst, (void (*)(void*))ft_nop);
+	ft_lstclear(&lst, (void (*)())ft_voidnop);
 }
 
