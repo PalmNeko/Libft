@@ -6,7 +6,7 @@
 /*   By: tookuyam <tookuyam@student.42tokyo.fr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/09 15:51:07 by tookuyam          #+#    #+#             */
-/*   Updated: 2024/07/16 15:36:40 by tookuyam         ###   ########.fr       */
+/*   Updated: 2024/07/17 15:53:02 by tookuyam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,10 +16,10 @@
 #include <stdio.h>
 
 static t_list	*_ft_lstmap(
-			t_list *lst,
-			t_list *tmp_head,
-			void *(*f)(void *),
-			void (*del)(void *));
+					t_list *lst,
+					t_list *tmp_head,
+					void *(*f)(void *),
+					void (*del)(void *));
 
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
