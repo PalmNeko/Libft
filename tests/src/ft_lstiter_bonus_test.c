@@ -34,6 +34,24 @@ TEST(ft_lstiter, basic_usage) {
 	EXPECT_EQ(3, g_value);
 }
 
+TEST(ft_lstiter, two_way_list) {
+	t_list	*root;
+
+	root = NULL;
+	count_up(NULL);
+	ft_lstiter(root, count_up);
+	EXPECT_EQ(0, g_value);
+	root = (t_list []) {{
+		.content = (int []){1},
+		.next = (t_list	[]) {{
+			.content = (int []){2},
+			.next = NULL,
+		}}
+	}};
+	ft_lstiter(root, count_up);
+	EXPECT_EQ(3, g_value);
+}
+
 TEST(ft_lstiter, circular_list) {
 	t_list	*root;
 
