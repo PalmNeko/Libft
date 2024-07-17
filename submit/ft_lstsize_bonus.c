@@ -6,7 +6,7 @@
 /*   By: tookuyam <tookuyam@student.42tokyo.fr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/08 19:04:51 by tookuyam          #+#    #+#             */
-/*   Updated: 2024/07/16 15:37:14 by tookuyam         ###   ########.fr       */
+/*   Updated: 2024/07/17 16:41:25 by tookuyam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,12 @@ int	ft_lstsize(t_list *lst)
 	while (itr != NULL)
 	{
 		itr = itr->next;
+		size++;
+	}
+	itr = lst->prev;
+	while (itr != NULL)
+	{
+		itr = itr->prev;
 		size++;
 	}
 	if (tmp_prev != NULL)
