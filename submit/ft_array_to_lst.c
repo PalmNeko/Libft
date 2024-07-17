@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_array_to_lst.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tookuyam <tookuyam@student.42tokyo.jp>     +#+  +:+       +#+        */
+/*   By: tookuyam <tookuyam@student.42tokyo.fr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/09 13:48:31 by tookuyam          #+#    #+#             */
-/*   Updated: 2024/06/11 23:05:27 by tookuyam         ###   ########.fr       */
+/*   Updated: 2024/07/17 16:04:00 by tookuyam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ t_list	*ft_array_to_lst(void **array, size_t size)
 			ft_lstclear(&root, (void (*)(void *))ft_voidnop);
 			return (NULL);
 		}
-		iter->next = tmp;
+		ft_lstadd_back(&iter, tmp);
 		iter = tmp;
 		index++;
 	}
