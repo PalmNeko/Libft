@@ -33,3 +33,18 @@ TEST(ft_lstlast_bonus, two_way_list) {
 	EXPECT_EQ(NULL, ft_lstlast(NULL));
 	ft_lstclear(&root, (void(*)())ft_voidnop);
 }
+
+TEST(ft_lstlast_bonus, circular_list) {
+	t_list	*root;
+
+	root = NULL;
+	ft_lstadd_back(&root, ft_lstnewcircular((int []){1}));
+	ft_lstadd_back(&root, ft_lstnew((int []){2}));
+	ft_lstadd_back(&root, ft_lstnew((int []){3}));
+	EXPECT_EQ(3, *(int *)ft_lstlast(root)->content);
+	EXPECT_EQ(1, *(int *)ft_lstlast(root->next)->content);
+	EXPECT_EQ(2, *(int *)ft_lstlast(root->next->next)->content);
+	EXPECT_EQ(2, *(int *)ft_lstlast(root->prev)->content);
+	EXPECT_EQ(NULL, ft_lstlast(NULL));
+	ft_lstclear(&root, (void(*)())ft_voidnop);
+}
