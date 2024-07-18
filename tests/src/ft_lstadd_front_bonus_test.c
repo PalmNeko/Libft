@@ -46,7 +46,7 @@ TEST(ft_lstadd_front_bonus, circular_list) {
 	t_list	*root;
 
 	root = ft_lstnewcircular((int []){1});
-	ft_lstadd_front(&root, ft_lstnew((int []){2}));
+	ft_lstadd_front(&root, ft_lstnewcircular((int []){2}));
 	EXPECT_EQ(2, *(int *)root->content);
 	EXPECT_EQ(1, *(int *)root->next->content);
 	EXPECT_EQ(2, *(int *)root->next->next->content);
@@ -54,7 +54,7 @@ TEST(ft_lstadd_front_bonus, circular_list) {
 	EXPECT_EQ(2, *(int *)root->prev->prev->content);
 	EXPECT_EQ(root, root->prev->prev);
 	root = root->next;
-	ft_lstadd_front(&root, ft_lstnew((int []){3}));
+	ft_lstadd_front(&root, ft_lstnewcircular((int []){3}));
 	EXPECT_EQ(3, *(int *)root->content);
 	EXPECT_EQ(2, *(int *)root->prev->content);
 	EXPECT_EQ(1, *(int *)root->prev->prev->content);

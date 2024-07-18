@@ -66,7 +66,7 @@ TEST(ft_lstmap_bonus, circular_list)
 
 	root = NULL;
 	ft_lstadd_back(&root, ft_lstnewcircular((int []){1}));
-	ft_lstadd_back(&root, ft_lstnew((int []){3}));
+	ft_lstadd_back(&root, ft_lstnewcircular((int []){3}));
 	g_called_cnt = 0;
 	squared_root = ft_lstmap(root, _squre, _del_func);
 	EXPECT_EQ(2, g_called_cnt);

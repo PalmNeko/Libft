@@ -60,7 +60,7 @@ TEST(ft_lstiter, circular_list) {
 	ft_lstiter(root, count_up);
 	EXPECT_EQ(0, g_value);
 	root = ft_lstnewcircular((int []){1});
-	ft_lstadd_front(&root, ft_lstnew((int []){2}));
+	ft_lstadd_front(&root, ft_lstnewcircular((int []){2}));
 	ft_lstiter(root, count_up);
 	ft_lstclear(&root, (void (*)())ft_nop);
 	EXPECT_EQ(3, g_value);

@@ -36,9 +36,9 @@ TEST(ft_lstsize_bonus, circular_list) {
 	EXPECT_EQ(0, ft_lstsize(root));
 	ft_lstadd_back(&root, ft_lstnewcircular((int []){3}));
 	EXPECT_EQ(1, ft_lstsize(root));
-	ft_lstadd_front(&root, ft_lstnew((int []){2}));
+	ft_lstadd_front(&root, ft_lstnewcircular((int []){2}));
 	EXPECT_EQ(2, ft_lstsize(root));
-	ft_lstadd_front(&root, ft_lstnew((int []){1}));
+	ft_lstadd_front(&root, ft_lstnewcircular((int []){1}));
 	EXPECT_EQ(3, ft_lstsize(root));
 	EXPECT_EQ(3, ft_lstsize(root->next));
 	EXPECT_EQ(3, ft_lstsize(root->next->next));

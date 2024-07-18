@@ -74,8 +74,8 @@ TEST(ft_lstdelone_bonus, circular_list) {
 	g_del_cnt = 0;
 	root = NULL;
 	ft_lstadd_back(&root, ft_lstnewcircular(&values[0]));
-	ft_lstadd_back(&root, ft_lstnew(&values[1]));
-	ft_lstadd_back(&root, ft_lstnew(&values[2]));
+	ft_lstadd_back(&root, ft_lstnewcircular(&values[1]));
+	ft_lstadd_back(&root, ft_lstnewcircular(&values[2]));
 	tmp = root;
 	root = root->next;
 	ft_lstdelone(tmp, _delone_);
