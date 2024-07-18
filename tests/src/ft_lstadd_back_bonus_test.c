@@ -46,3 +46,34 @@ TEST(ft_lstadd_back_bonus, two_way_list) {
 	root = root->prev;
 	ft_lstclear(&root, (void (*)(void *))ft_voidnop);
 }
+
+TEST(ft_lstadd_back_bonus, circular_list) {
+	t_list	*root;
+
+	root = ft_lstnewcircular((int []){1});
+	ft_lstadd_back(&root, ft_lstnew((int []){2}));
+	EXPECT_EQ(2, *(int *)root->next->content);
+	EXPECT_EQ(1, *(int *)root->next->next->content);
+	EXPECT_EQ(1, *(int *)root->next->prev->content);
+	EXPECT_EQ(2, *(int *)root->prev->content);
+	EXPECT_EQ(1, *(int *)root->prev->prev->content);
+	EXPECT_EQ(1, *(int *)root->prev->next->content);
+	ft_lstadd_back(&root, ft_lstnew((int []){3}));
+	EXPECT_EQ(2, *(int *)root->next->content);
+	EXPECT_EQ(3, *(int *)root->next->next->content);
+	EXPECT_EQ(1, *(int *)root->next->next->next->content);
+	EXPECT_EQ(3, *(int *)root->prev->content);
+	EXPECT_EQ(2, *(int *)root->prev->prev->content);
+	EXPECT_EQ(1, *(int *)root->prev->prev->prev->content);
+	root = root->next;
+	ft_lstadd_back(&root, ft_lstnew((int []){4}));
+	EXPECT_EQ(3, *(int *)root->next->content);
+	EXPECT_EQ(1, *(int *)root->next->next->content);
+	EXPECT_EQ(4, *(int *)root->next->next->next->content);
+	EXPECT_EQ(2, *(int *)root->next->next->next->next->content);
+	EXPECT_EQ(4, *(int *)root->prev->content);
+	EXPECT_EQ(1, *(int *)root->prev->prev->content);
+	EXPECT_EQ(3, *(int *)root->prev->prev->prev->content);
+	EXPECT_EQ(2, *(int *)root->prev->prev->prev->prev->content);
+	ft_lstclear(&root, (void (*)(void *))ft_voidnop);
+}
