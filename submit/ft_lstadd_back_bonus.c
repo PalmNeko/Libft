@@ -6,7 +6,7 @@
 /*   By: tookuyam <tookuyam@student.42tokyo.fr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/08 19:12:42 by tookuyam          #+#    #+#             */
-/*   Updated: 2024/07/12 15:16:53 by tookuyam         ###   ########.fr       */
+/*   Updated: 2024/07/18 16:18:57 by tookuyam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,16 +18,14 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 
 	last_list = ft_lstlast(*lst);
 	if (last_list == NULL)
-		*lst = new;
-	else
 	{
-		if (last_list->next != NULL)
-		{
-			last_list->next->prev = new;
-			new->next = last_list->next;
-		}
-		last_list->next = new;
-		new->prev = last_list;
+		*lst = new;
+		return ;
 	}
+	if (last_list->next != NULL)
+		last_list->next->prev = new;
+	new->next = last_list->next;
+	new->prev = last_list;
+	last_list->next = new;
 	return ;
 }

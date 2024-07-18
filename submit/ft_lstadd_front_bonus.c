@@ -6,7 +6,7 @@
 /*   By: tookuyam <tookuyam@student.42tokyo.fr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/08 19:02:06 by tookuyam          #+#    #+#             */
-/*   Updated: 2024/07/18 16:10:34 by tookuyam         ###   ########.fr       */
+/*   Updated: 2024/07/18 16:17:27 by tookuyam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,10 +24,8 @@ void	ft_lstadd_front(t_list **lst, t_list *new)
 	}
 	first = ft_lstfirst(*lst);
 	if (first->prev != NULL)
-	{
 		first->prev->next = new;
-		new->prev = first->prev;
-	}
+	new->prev = first->prev;
 	new->next = first;
 	first->prev = new;
 	if (*lst == first)
