@@ -6,7 +6,7 @@
 /*   By: tookuyam <tookuyam@student.42tokyo.fr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/08 19:04:51 by tookuyam          #+#    #+#             */
-/*   Updated: 2024/07/17 16:41:25 by tookuyam         ###   ########.fr       */
+/*   Updated: 2024/07/18 15:07:54 by tookuyam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,29 +14,23 @@
 
 int	ft_lstsize(t_list *lst)
 {
-	int		size;
-	t_list	*tmp_prev;
 	t_list	*itr;
+	t_list	*start;
+	int		size;
 
-	if (lst == NULL)
+	start = ft_lstfirst(lst);
+	if (start == NULL)
 		return (0);
-	tmp_prev = lst->prev;
-	if (tmp_prev != NULL)
-		tmp_prev->next = NULL;
+	if (start->prev != NULL)
+		start->prev->next = NULL;
+	itr = start;
 	size = 0;
-	itr = lst;
 	while (itr != NULL)
 	{
+		size += 1;
 		itr = itr->next;
-		size++;
 	}
-	itr = lst->prev;
-	while (itr != NULL)
-	{
-		itr = itr->prev;
-		size++;
-	}
-	if (tmp_prev != NULL)
-		tmp_prev->next = lst;
+	if (start->prev != NULL)
+		start->prev->next = start;
 	return (size);
 }
