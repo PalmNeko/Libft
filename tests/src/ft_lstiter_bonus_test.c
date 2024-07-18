@@ -59,15 +59,9 @@ TEST(ft_lstiter, circular_list) {
 	count_up(NULL);
 	ft_lstiter(root, count_up);
 	EXPECT_EQ(0, g_value);
-	root = (t_list []) {{
-		.content = (int []){1},
-		.next = NULL,
-	}};
-	ft_lstadd_front(&root, (t_list []) {{
-		.content = (int []){2},
-		.next = NULL,
-		.prev = NULL,
-	}});
+	root = ft_lstnewcircular((int []){1});
+	ft_lstadd_front(&root, ft_lstnew((int []){2}));
 	ft_lstiter(root, count_up);
+	ft_lstclear(&root, (void (*)())ft_nop);
 	EXPECT_EQ(3, g_value);
 }
