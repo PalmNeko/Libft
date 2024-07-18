@@ -65,3 +65,34 @@ TEST(ft_lstdelone_bonus, two_way_list) {
 	EXPECT_EQ(4, values[1]);
 	EXPECT_EQ(4, values[2]);
 }
+
+TEST(ft_lstdelone_bonus, circular_list) {
+	t_list	*root;
+	t_list	*tmp;
+	int		values[3] = {1, 2, 3};
+
+	g_del_cnt = 0;
+	root = NULL;
+	ft_lstadd_back(&root, ft_lstnewcircular(&values[0]));
+	ft_lstadd_back(&root, ft_lstnew(&values[1]));
+	ft_lstadd_back(&root, ft_lstnew(&values[2]));
+	tmp = root;
+	root = root->next;
+	ft_lstdelone(tmp, _delone_);
+	EXPECT_EQ(2, *(int *)root->prev->prev->content);
+	EXPECT_EQ(2, *(int *)root->next->next->content);
+	EXPECT_EQ(3, *(int *)root->next->content);
+	EXPECT_EQ(3, *(int *)root->prev->content);
+	tmp = root;
+	root = root->next;
+	ft_lstdelone(tmp, _delone_);
+	EXPECT_EQ(3, *(int *)root->content);
+	EXPECT_EQ(root, root->prev);
+	EXPECT_EQ(root, root->next);
+	tmp = root;
+	ft_lstdelone(tmp, _delone_);
+	EXPECT_EQ(3, g_del_cnt);
+	EXPECT_EQ(4, values[0]);
+	EXPECT_EQ(4, values[1]);
+	EXPECT_EQ(4, values[2]);
+}
