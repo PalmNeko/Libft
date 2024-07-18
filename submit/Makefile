@@ -6,7 +6,7 @@
 #    By: tookuyam <tookuyam@student.42tokyo.fr>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/09/22 17:19:34 by tookuyam          #+#    #+#              #
-#    Updated: 2024/07/18 13:54:52 by tookuyam         ###   ########.fr        #
+#    Updated: 2024/07/18 14:54:28 by tookuyam         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -40,6 +40,7 @@ SRCS = \
 	ft_ltoa_inplace.c \
 	ft_lst_to_array.c \
 	ft_lstdel_content.c \
+	ft_lstfirst.c \
 	ft_lstnewcircular.c \
 	ft_memchr.c \
 	ft_memcmp.c \

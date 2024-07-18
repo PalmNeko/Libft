@@ -6,7 +6,7 @@
 /*   By: tookuyam <tookuyam@student.42tokyo.fr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/22 17:49:45 by tookuyam          #+#    #+#             */
-/*   Updated: 2024/07/18 13:54:52 by tookuyam         ###   ########.fr       */
+/*   Updated: 2024/07/18 14:55:11 by tookuyam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -105,6 +105,7 @@ size_t		ft_strlen(const char *s);
 size_t		ft_strnlen(const char *s, size_t maxlen);
 ssize_t		ft_putchar_fd(char c, int fd);
 t_list		*ft_array_to_lst(void **array, size_t size);
+t_list		*ft_lstfirst(t_list *lst);
 t_list		*ft_lstlast(t_list *lst);
 t_list		*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 t_list		*ft_lstnew(void *content);
