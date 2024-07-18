@@ -6,7 +6,7 @@
 /*   By: tookuyam <tookuyam@student.42tokyo.fr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/22 17:49:45 by tookuyam          #+#    #+#             */
-/*   Updated: 2024/07/16 15:51:58 by tookuyam         ###   ########.fr       */
+/*   Updated: 2024/07/18 13:54:52 by tookuyam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -108,6 +108,7 @@ t_list		*ft_array_to_lst(void **array, size_t size);
 t_list		*ft_lstlast(t_list *lst);
 t_list		*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 t_list		*ft_lstnew(void *content);
+t_list		*ft_lstnewcircular(void *content);
 uint32_t	ft_xorshift_u32(uint32_t seed, uint32_t x);
 uint32_t	ft_addr2uint32_t(void *addr);
 void		**ft_lst_to_array(t_list *lst, size_t *ret_size);
