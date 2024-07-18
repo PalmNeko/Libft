@@ -31,3 +31,22 @@ TEST(ft_lstclear, basic_usage) {
 	EXPECT_EQ(2, buf[2]);
 }
 
+TEST(ft_lstclear, two_way_list) {
+	t_list	*root = NULL;
+	int		buf[3];
+
+	buf[0] = 1;
+	buf[1] = 1;
+	buf[2] = 1;
+	ft_lstadd_front(&root, ft_lstnew(&buf[0]));
+	ft_lstadd_front(&root, ft_lstnew(&buf[1]));
+	ft_lstadd_front(&root, ft_lstnew(&buf[2]));
+	g_del_cnt = 0;
+	root = root->next;
+	ft_lstclear(&root, _del_one_function);
+	EXPECT_EQ(NULL, root);
+	EXPECT_EQ(3, g_del_cnt);
+	EXPECT_EQ(2, buf[0]);
+	EXPECT_EQ(2, buf[1]);
+	EXPECT_EQ(2, buf[2]);
+}
