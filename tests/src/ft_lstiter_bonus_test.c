@@ -62,6 +62,6 @@ TEST(ft_lstiter, circular_list) {
 	root = ft_lstnewcircular((int []){1});
 	ft_lstadd_front(&root, ft_lstnewcircular((int []){2}));
 	ft_lstiter(root, count_up);
-	ft_lstclear(&root, (void (*)())ft_nop);
+	ft_lstclear(&root, (void (*)(void *))ft_voidnop);
 	EXPECT_EQ(3, g_value);
 }
