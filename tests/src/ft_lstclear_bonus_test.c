@@ -19,6 +19,8 @@ TEST(ft_lstclear, basic_usage) {
 	buf[0] = 1;
 	buf[1] = 1;
 	buf[2] = 1;
+	ft_lstclear(&root, _del_one_function);
+	EXPECT_EQ(NULL, root);
 	ft_lstadd_front(&root, ft_lstnew(&buf[0]));
 	ft_lstadd_front(&root, ft_lstnew(&buf[1]));
 	ft_lstadd_front(&root, ft_lstnew(&buf[2]));

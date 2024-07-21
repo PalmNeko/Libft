@@ -6,7 +6,7 @@
 /*   By: tookuyam <tookuyam@student.42tokyo.fr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/08 19:25:51 by tookuyam          #+#    #+#             */
-/*   Updated: 2024/07/18 14:26:17 by tookuyam         ###   ########.fr       */
+/*   Updated: 2024/07/21 17:19:35 by tookuyam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	ft_lstclear(t_list **lst, void (*del)(void *))
 	t_list	*free_lst;
 	t_list	*start;
 
-	if (lst == NULL)
+	if (lst == NULL || *lst == NULL)
 		return ;
 	itr = (*lst);
 	if (itr->prev != NULL)
