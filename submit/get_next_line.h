@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line.h                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tookuyam <tookuyam@student.42tokyo.jp>     +#+  +:+       +#+        */
+/*   By: tookuyam <tookuyam@student.42tokyo.fr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/11 18:09:06 by tookuyam          #+#    #+#             */
-/*   Updated: 2023/11/04 12:41:07 by tookuyam         ###   ########.fr       */
+/*   Created: 2024/03/21 19:20:47 by tookuyam          #+#    #+#             */
+/*   Updated: 2024/07/21 19:45:09 by tookuyam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,17 +16,18 @@
 # include <stddef.h>
 
 # ifndef BUFFER_SIZE
-#  define BUFFER_SIZE 10
+#  define BUFFER_SIZE 1
 # endif
 
-char		*get_next_line(int fd);
-char		*_get_next_line(char **str, int fd, char **leftovers);
-char		*ft_strjoin_fd(char *left, int fd, int *is_eof);
-char		*ft_substrchr(char const *str, char sep);
+typedef struct s_gnl_node
+{
+	int		fd;
+	char	*carry_up;
+}	t_gnl_node;
 
-size_t		ft_strlenchr(char const *s, char find);
-void		*free_manager(char **str);
-char		*ft_strchr(const char *s, int find);
-char		*read_str(int fd);
+typedef void	(*t_free)(void *);
+
+char	*get_next_line(int fd);
+char	*get_next_line2(int fd, char **carry_up);
 
 #endif
