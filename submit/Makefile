@@ -93,8 +93,7 @@ SRCS = \
 	ft_utoa_base.c \
 	ft_voidnop.c \
 	ft_xorshift_u32.c \
-	get_next_line.c \
-	get_next_line_utils.c
+	get_next_line.c
 
 BONUS = \
 	ft_lstnew_bonus.c \
