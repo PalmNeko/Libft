@@ -6,7 +6,7 @@
 #    By: tookuyam <tookuyam@student.42tokyo.fr>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/09/22 17:19:34 by tookuyam          #+#    #+#              #
-#    Updated: 2024/07/18 14:54:28 by tookuyam         ###   ########.fr        #
+#    Updated: 2024/07/23 12:51:00 by tookuyam         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -92,6 +92,8 @@ SRCS = \
 	ft_utoa.c \
 	ft_utoa_base.c \
 	ft_voidnop.c \
+	ft_write_aligned_left.c \
+	ft_write_aligned_right.c \
 	ft_xorshift_u32.c \
 	get_next_line.c
 
