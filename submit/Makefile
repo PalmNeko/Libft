@@ -6,14 +6,14 @@
 #    By: tookuyam <tookuyam@student.42tokyo.fr>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/09/22 17:19:34 by tookuyam          #+#    #+#              #
-#    Updated: 2024/07/23 12:51:00 by tookuyam         ###   ########.fr        #
+#    Updated: 2024/07/26 15:55:15 by tookuyam         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
 CC = cc
 CFLAGS += -Wall -Wextra -Werror
-CFLAGS += -MP -MMD
+CFLAGS += -MP -MMD -Wno-unused-value
 SRCS = \
 	ft_abs.c \
 	ft_add_l.c \
@@ -96,6 +96,34 @@ SRCS = \
 	ft_write_aligned_right.c \
 	ft_xorshift_u32.c \
 	get_next_line.c
+
+# ftprintf
+SRC += \
+	ft_printf.c \
+	ft_vdprintf.c \
+	fp_modules/fp_add_0x.c \
+	fp_modules/fp_add_sign.c \
+	fp_modules/fp_convert_int2str.c \
+	fp_modules/fp_convert_ptr2str.c \
+	fp_modules/fp_convert_uchr2str.c \
+	fp_modules/fp_convert_uint2str.c \
+	fp_modules/fp_cut_string.c \
+	fp_modules/fp_destroy_t_cs.c \
+	fp_modules/fp_generate_cs.c \
+	fp_modules/fp_gen_chrstr.c \
+	fp_modules/fp_gen_intstr.c \
+	fp_modules/fp_gen_ptrstr.c \
+	fp_modules/fp_gen_str.c \
+	fp_modules/fp_gen_uintstr.c \
+	fp_modules/fp_get_cs_len.c \
+	fp_modules/fp_get_sign_type.c \
+	fp_modules/fp_new_t_cs.c \
+	fp_modules/fp_pad_for_num.c \
+	fp_modules/fp_print_aligned_left.c \
+	fp_modules/fp_print_aligned_right.c \
+	fp_modules/fp_rewrite_special_behavior.c \
+	fp_modules/fp_to_upper.c \
+	fp_modules/fp_vdprint_cs.c
 
 BONUS = \
 	ft_lstnew_bonus.c \
