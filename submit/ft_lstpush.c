@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-void	ft_lstpush(t_list **lst, void *content)
+void	ft_lstpush(t_list **lst, t_list *content)
 {
 	ft_lstadd_front(lst, content);
 	return ;
