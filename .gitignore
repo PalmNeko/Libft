@@ -13,3 +13,4 @@ libft_test
 *.gcda
 .artifacts
 /get_next_line.h
+/ft_printf.h

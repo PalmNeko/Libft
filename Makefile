@@ -1,6 +1,7 @@
 
+PRODUCTS = libft.h libft.a get_next_line.h ft_printf.h
 
-all: build libft.h libft.a get_next_line.h ft_printf.h
+all: build $(PRODUCTS)
 
 %.h: submit/%.h
 	cp $< .
@@ -36,6 +37,4 @@ clean: ## Run clean
 	find . -name "*.gcda" -delete
 
 fclean: clean
-	rm -rf libft.a
-	rm -rf libft.h
-	rm -rf get_next_line.h
+	rm -rf $(PRODUCTS)
