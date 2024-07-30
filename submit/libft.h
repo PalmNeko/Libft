@@ -6,7 +6,7 @@
 /*   By: tookuyam <tookuyam@student.42tokyo.fr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/22 17:49:45 by tookuyam          #+#    #+#             */
-/*   Updated: 2024/07/27 18:57:16 by tookuyam         ###   ########.fr       */
+/*   Updated: 2024/07/30 14:38:43 by tookuyam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,6 @@ typedef struct s_list
 	struct s_list	*next;
 	struct s_list	*prev;
 }	t_list;
-
-typedef t_list	t_stack;
 
 typedef struct s_free_args
 {
