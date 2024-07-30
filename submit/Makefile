@@ -6,13 +6,13 @@
 #    By: tookuyam <tookuyam@student.42tokyo.fr>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/09/22 17:19:34 by tookuyam          #+#    #+#              #
-#    Updated: 2024/07/27 18:59:02 by tookuyam         ###   ########.fr        #
+#    Updated: 2024/07/30 14:31:57 by tookuyam         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
 CC = cc
-CFLAGS += -Wall -Wextra -Werror
+CFLAGS += -Wall -Wextra -Werror -I .
 CFLAGS += -MP -MMD -Wno-unused-value
 SRCS = \
 	ft_abs.c \
@@ -101,7 +101,7 @@ SRCS = \
 	get_next_line.c
 
 # ftprintf
-SRC += \
+SRCS += \
 	ft_printf.c \
 	ft_vdprintf.c \
 	fp_modules/fp_add_0x.c \
