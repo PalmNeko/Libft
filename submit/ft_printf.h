@@ -6,13 +6,16 @@
 /*   By: tookuyam <tookuyam@student.42tokyo.fr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/23 16:23:24 by tookuyam          #+#    #+#             */
-/*   Updated: 2024/07/23 16:24:00 by tookuyam         ###   ########.fr       */
+/*   Updated: 2024/07/30 14:28:14 by tookuyam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FT_PRINTF_H
 # define FT_PRINTF_H
 
-# include "fp.h"
+# include <stdarg.h>
+
+int	ft_printf(const char *format, ...);
+int	ft_vdprintf(int fd, const char *format, va_list arg_ptr);
 
 #endif

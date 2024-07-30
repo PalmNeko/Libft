@@ -1,6 +1,6 @@
 
 
-all: build libft.h libft.a get_next_line.h
+all: build libft.h libft.a get_next_line.h ft_printf.h
 
 %.h: submit/%.h
 	cp $< .
