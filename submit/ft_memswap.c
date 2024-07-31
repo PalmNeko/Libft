@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memswap.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tookuyam <tookuyam@student.42.fr>          +#+  +:+       +#+        */
+/*   By: tookuyam <tookuyam@student.42tokyo.fr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/14 22:36:47 by tookuyam          #+#    #+#             */
-/*   Updated: 2024/03/14 22:36:47 by tookuyam         ###   ########.fr       */
+/*   Updated: 2024/07/31 17:05:07 by tookuyam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,19 +26,17 @@ int	ft_memswap(void *value1, void *value2, size_t size)
 	size_t			index;
 	unsigned char	*v1;
 	unsigned char	*v2;
+	unsigned char	temp;
 
-	v1 = value1;
-	v2 = value2;
+	v1 = (unsigned char *)value1;
+	v2 = (unsigned char *)value2;
 	index = 0;
 	while (index < size)
 	{
-		if (ft_memcmp(v1, v2, size) != 0)
-		{
-			v1[index] ^= v2[index];
-			v2[index] ^= v1[index];
-			v1[index] ^= v2[index];
-		}
-		index += 1;
+		temp = v1[index];
+		v1[index] = v2[index];
+		v2[index] = temp;
+		index++;
 	}
 	return (0);
 }
