@@ -6,7 +6,7 @@
 /*   By: tookuyam <tookuyam@student.42tokyo.fr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/14 22:36:47 by tookuyam          #+#    #+#             */
-/*   Updated: 2024/07/31 17:05:07 by tookuyam         ###   ########.fr       */
+/*   Updated: 2024/07/31 17:10:09 by tookuyam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,9 @@
  * @param value1 one value
  * @param value2 one value
  * @param size size value1 and value2 [byte]
- * @return return 0 if success. return -1 if occured error.
- * never occur error, so return value is useless.
+ * @return none
  */
-int	ft_memswap(void *value1, void *value2, size_t size)
+void	ft_memswap(void *value1, void *value2, size_t size)
 {
 	size_t			index;
 	unsigned char	*v1;
@@ -38,5 +37,5 @@ int	ft_memswap(void *value1, void *value2, size_t size)
 		v2[index] = temp;
 		index++;
 	}
-	return (0);
+	return ;
 }
