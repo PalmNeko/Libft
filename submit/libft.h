@@ -6,7 +6,7 @@
 /*   By: tookuyam <tookuyam@student.42tokyo.fr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/22 17:49:45 by tookuyam          #+#    #+#             */
-/*   Updated: 2024/07/31 16:37:43 by tookuyam         ###   ########.fr       */
+/*   Updated: 2024/07/31 16:41:27 by tookuyam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -109,6 +109,7 @@ ssize_t		ft_write_aligned_left(
 ssize_t		ft_write_aligned_right(
 				int fd, const void *buf, size_t n, size_t width);
 t_list		*ft_array_to_lst(void **array, size_t size);
+t_list		*ft_lstat(t_list *list, int no);
 t_list		*ft_lstfirst(t_list *lst);
 t_list		*ft_lstlast(t_list *lst);
 t_list		*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));

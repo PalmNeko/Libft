@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-void	*ft_lstat(t_list *list, int no)
+t_list	*ft_lstat(t_list *list, int no)
 {
 	int		index;
 	t_list	*first;
@@ -28,6 +28,6 @@ void	*ft_lstat(t_list *list, int no)
 		index++;
 	}
 	if (list != NULL)
-		return (list->content);
+		return (list);
 	return (NULL);
 }
