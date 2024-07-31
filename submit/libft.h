@@ -6,7 +6,7 @@
 /*   By: tookuyam <tookuyam@student.42tokyo.fr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/22 17:49:45 by tookuyam          #+#    #+#             */
-/*   Updated: 2024/07/30 14:38:43 by tookuyam         ###   ########.fr       */
+/*   Updated: 2024/07/31 16:37:43 by tookuyam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -114,6 +114,7 @@ t_list		*ft_lstlast(t_list *lst);
 t_list		*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 t_list		*ft_lstnew(void *content);
 t_list		*ft_lstnewcircular(void *content);
+t_list		*ft_lstpop(t_list **lst);
 uint32_t	ft_xorshift_u32(uint32_t seed, uint32_t x);
 uint32_t	ft_addr2uint32_t(void *addr);
 void		**ft_lst_to_array(t_list *lst, size_t *ret_size);
@@ -134,6 +135,7 @@ void		ft_lstdel_content(
 				t_list **root, void *content, void (*del)(void *));
 void		ft_lstdelone(t_list *lst, void (*del)(void *));
 void		ft_lstiter(t_list *lst, void (*f)(void *));
+void		ft_lstpush(t_list **lst, t_list *content);
 void		ft_putendl_fd(char *s, int fd);
 void		ft_putnbr_fd(int n, int fd);
 void		ft_selection_sort(
