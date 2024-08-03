@@ -6,7 +6,7 @@
 /*   By: tookuyam <tookuyam@student.42tokyo.fr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/22 17:49:45 by tookuyam          #+#    #+#             */
-/*   Updated: 2024/07/31 17:08:50 by tookuyam         ###   ########.fr       */
+/*   Updated: 2024/08/03 12:15:18 by tookuyam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,7 +86,9 @@ int			ft_isprint(int c);
 int			ft_isspace(char c);
 int			ft_isupper(int c);
 int			ft_lstsize(t_list *lst);
+int			ft_max(int a, int b);
 int			ft_memcmp(const void *s1, const void *s2, size_t n);
+int			ft_min(int a, int b);
 int			ft_mkostemp(char *template, int flags);
 int			ft_nop(void);
 int			ft_strcmp(const char *s1, const char *s2);
