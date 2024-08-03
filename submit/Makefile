@@ -6,7 +6,7 @@
 #    By: tookuyam <tookuyam@student.42tokyo.fr>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/09/22 17:19:34 by tookuyam          #+#    #+#              #
-#    Updated: 2024/08/03 15:24:07 by tookuyam         ###   ########.fr        #
+#    Updated: 2024/08/03 17:24:40 by tookuyam         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -37,11 +37,14 @@ SRCS = \
 	ft_isspace.c \
 	ft_isupper.c \
 	ft_itoa.c \
+	ft_itrhas_next.c \
+	ft_itrnext.c \
 	ft_ltoa_inplace.c \
 	ft_lst_to_array.c \
 	ft_lstat.c \
 	ft_lstdel_content.c \
 	ft_lstfirst.c \
+	ft_lstinit_itr.c \
 	ft_lstnewcircular.c \
 	ft_lstpop.c \
 	ft_lstpush.c \

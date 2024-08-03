@@ -6,7 +6,7 @@
 /*   By: tookuyam <tookuyam@student.42tokyo.fr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/22 17:49:45 by tookuyam          #+#    #+#             */
-/*   Updated: 2024/08/03 12:15:18 by tookuyam         ###   ########.fr       */
+/*   Updated: 2024/08/03 17:43:55 by tookuyam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,16 @@ typedef struct s_free_args
 	void	*arg;
 }	t_free_args;
 
+typedef struct s_iter
+{
+	void	*current;
+	void	*end;
+	void	*start;
+	void	*(*next)(struct s_iter *itr);
+	bool	(*has_next)(struct s_iter *itr);
+	size_t	index;
+}	t_iter;
+
 /**
  * @param key search keywoad pointer
  * @param base search array (must sorted)
@@ -49,6 +59,7 @@ typedef struct s_bsearch_arg {
 }	t_bsearch_arg;
 
 bool		ft_includes(char c, char *sets);
+bool		ft_itrhas_next(t_iter *itr);
 bool		ft_strmatch(char *pattern, char *text);
 bool		ft_strincludes(char *texts, char *sets);
 char		**ft_split(char const *s, char c);
@@ -122,6 +133,7 @@ uint32_t	ft_addr2uint32_t(void *addr);
 void		**ft_lst_to_array(t_list *lst, size_t *ret_size);
 void		*ft_bsearch(t_bsearch_arg *arg);
 void		*ft_calloc(size_t count, size_t size);
+void		*ft_itrnext(t_iter *itr);
 void		*ft_memchr(const void *s, int c, size_t n);
 void		*ft_memcpy(void *dst, const void *src, size_t n);
 void		*ft_memmove(void *dst, const void *src, size_t len);
@@ -136,6 +148,7 @@ void		ft_lstclear(t_list **lst, void (*del)(void *));
 void		ft_lstdel_content(
 				t_list **root, void *content, void (*del)(void *));
 void		ft_lstdelone(t_list *lst, void (*del)(void *));
+void		ft_lstinit_itr(t_list *lst, t_iter *itr);
 void		ft_lstiter(t_list *lst, void (*f)(void *));
 void		ft_lstpush(t_list **lst, t_list *content);
 void		ft_memswap(void *value1, void *value2, size_t size);
