@@ -6,7 +6,7 @@
 #    By: tookuyam <tookuyam@student.42tokyo.fr>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/09/22 17:19:34 by tookuyam          #+#    #+#              #
-#    Updated: 2024/08/03 12:15:53 by tookuyam         ###   ########.fr        #
+#    Updated: 2024/08/03 15:24:07 by tookuyam         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -105,6 +105,7 @@ SRCS = \
 # ftprintf
 SRCS += \
 	ft_printf.c \
+	ft_dprintf.c \
 	ft_vdprintf.c \
 	fp_modules/fp_add_0x.c \
 	fp_modules/fp_add_sign.c \
