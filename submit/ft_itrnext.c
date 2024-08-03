@@ -18,9 +18,6 @@ void	*ft_itrnext(t_iter *itr)
 
 	result = NULL;
 	if (itr->has_next(itr))
-	{
 		result = itr->next(itr);
-		itr->index += 1;
-	}
 	return (result);
 }
