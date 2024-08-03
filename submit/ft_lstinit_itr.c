@@ -30,22 +30,22 @@ static bool	ft_lstitrhas_next(t_iter *itr)
 {
 	if (itr->current == NULL)
 		return (false);
-	if (itr->current == itr->end)
-		return (false);
 	else
 		return (true);
 }
 
 static void	*ft_lstitrnext(t_iter *itr)
 {
-	t_list	*current;
+	t_list	*result;
 
-	if (itr->current == itr->end)
-		itr->current = NULL;
-	current = itr->current;
-	if (current == NULL)
-		return (NULL);
-	itr->current = current->next;
-	itr->index++;
-	return (itr->current);
+	result = itr->current;
+	if (result != NULL)
+	{
+		if (itr->current == itr->end)
+			itr->current = NULL;
+		else
+			itr->current = result->next;
+		itr->index++;
+	}
+	return (result);
 }

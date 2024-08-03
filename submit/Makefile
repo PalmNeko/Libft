@@ -6,7 +6,7 @@
 #    By: tookuyam <tookuyam@student.42tokyo.fr>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/09/22 17:19:34 by tookuyam          #+#    #+#              #
-#    Updated: 2024/08/03 17:24:40 by tookuyam         ###   ########.fr        #
+#    Updated: 2024/08/03 18:07:55 by tookuyam         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -37,8 +37,6 @@ SRCS = \
 	ft_isspace.c \
 	ft_isupper.c \
 	ft_itoa.c \
-	ft_itrhas_next.c \
-	ft_itrnext.c \
 	ft_ltoa_inplace.c \
 	ft_lst_to_array.c \
 	ft_lstat.c \

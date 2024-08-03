@@ -6,7 +6,7 @@
 /*   By: tookuyam <tookuyam@student.42tokyo.fr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/22 17:49:45 by tookuyam          #+#    #+#             */
-/*   Updated: 2024/08/03 17:43:55 by tookuyam         ###   ########.fr       */
+/*   Updated: 2024/08/03 18:07:39 by tookuyam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,7 +59,6 @@ typedef struct s_bsearch_arg {
 }	t_bsearch_arg;
 
 bool		ft_includes(char c, char *sets);
-bool		ft_itrhas_next(t_iter *itr);
 bool		ft_strmatch(char *pattern, char *text);
 bool		ft_strincludes(char *texts, char *sets);
 char		**ft_split(char const *s, char c);
@@ -133,7 +132,6 @@ uint32_t	ft_addr2uint32_t(void *addr);
 void		**ft_lst_to_array(t_list *lst, size_t *ret_size);
 void		*ft_bsearch(t_bsearch_arg *arg);
 void		*ft_calloc(size_t count, size_t size);
-void		*ft_itrnext(t_iter *itr);
 void		*ft_memchr(const void *s, int c, size_t n);
 void		*ft_memcpy(void *dst, const void *src, size_t n);
 void		*ft_memmove(void *dst, const void *src, size_t len);
