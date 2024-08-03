@@ -25,8 +25,10 @@ t_list	*ft_lstpop(t_list **lst)
 		first->prev->next = first->next;
 	if (first->next != NULL)
 		first->next->prev = first->prev;
-	if (*lst == first)
+	if (first->next == first)
 		*lst = NULL;
+	else
+		*lst = first->next;
 	first->prev = NULL;
 	first->next = NULL;
 	return (first);
