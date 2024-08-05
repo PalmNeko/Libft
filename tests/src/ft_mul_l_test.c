@@ -17,7 +17,19 @@ TEST(ft_mul_l, error_check) {
 	EXPECT_EQ(LONG_MAX, ft_mul_l((LONG_MAX / 2) + 1, 2));
 	EXPECT_EQ(ERANGE, errno);
 	errno = 0;
+	EXPECT_EQ(LONG_MAX, ft_mul_l(2, (LONG_MAX / 2) + 1));
+	EXPECT_EQ(ERANGE, errno);
+	errno = 0;
 	EXPECT_EQ(LONG_MIN, ft_mul_l((LONG_MIN / 2) - 1, 2));
+	EXPECT_EQ(ERANGE, errno);
+	errno = 0;
+	EXPECT_EQ(LONG_MIN, ft_mul_l(2, (LONG_MIN / 2) - 1));
+	EXPECT_EQ(ERANGE, errno);
+	errno = 0;
+	EXPECT_EQ(LONG_MAX, ft_mul_l(LONG_MIN, -1));
+	EXPECT_EQ(ERANGE, errno);
+	errno = 0;
+	EXPECT_EQ(LONG_MAX, ft_mul_l(-1, LONG_MIN));
 	EXPECT_EQ(ERANGE, errno);
 	errno = 0;
 }
