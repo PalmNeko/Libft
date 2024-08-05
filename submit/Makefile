@@ -6,7 +6,7 @@
 #    By: tookuyam <tookuyam@student.42tokyo.fr>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/09/22 17:19:34 by tookuyam          #+#    #+#              #
-#    Updated: 2024/08/03 18:07:55 by tookuyam         ###   ########.fr        #
+#    Updated: 2024/08/05 11:46:53 by tookuyam         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -62,6 +62,7 @@ SRCS = \
 	ft_putnbr_fd.c \
 	ft_putstr_fd.c \
 	ft_realloc.c \
+	ft_replace_last_newline.c \
 	ft_replace_random_alpha.c \
 	ft_selection_sort.c \
 	ft_set_errno.c \

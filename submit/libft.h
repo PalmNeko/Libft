@@ -6,7 +6,7 @@
 /*   By: tookuyam <tookuyam@student.42tokyo.fr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/22 17:49:45 by tookuyam          #+#    #+#             */
-/*   Updated: 2024/08/03 18:07:39 by tookuyam         ###   ########.fr       */
+/*   Updated: 2024/08/05 11:46:28 by tookuyam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,6 +59,7 @@ typedef struct s_bsearch_arg {
 }	t_bsearch_arg;
 
 bool		ft_includes(char c, char *sets);
+bool		ft_replace_last_newline(char *str);
 bool		ft_strmatch(char *pattern, char *text);
 bool		ft_strincludes(char *texts, char *sets);
 char		**ft_split(char const *s, char c);
