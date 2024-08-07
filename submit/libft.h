@@ -6,7 +6,7 @@
 /*   By: tookuyam <tookuyam@student.42tokyo.fr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/22 17:49:45 by tookuyam          #+#    #+#             */
-/*   Updated: 2024/08/05 11:46:28 by tookuyam         ###   ########.fr       */
+/*   Updated: 2024/08/07 10:39:16 by tookuyam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,6 +88,7 @@ char		*ft_utoa(unsigned int n);
 char		*ft_utoa_base_str(unsigned int n, const char *base_str);
 int			ft_abs(int i);
 int			ft_atoi(const char *str);
+int			ft_clamp(int min, int val, int max);
 int			ft_isalnum(int c);
 int			ft_isalpha(int c);
 int			ft_isascii(int c);
