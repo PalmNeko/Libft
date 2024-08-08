@@ -6,7 +6,7 @@
 /*   By: tookuyam <tookuyam@student.42tokyo.fr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/22 17:49:45 by tookuyam          #+#    #+#             */
-/*   Updated: 2024/08/07 10:39:16 by tookuyam         ###   ########.fr       */
+/*   Updated: 2024/08/08 16:44:43 by tookuyam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -151,6 +151,7 @@ void		ft_lstdelone(t_list *lst, void (*del)(void *));
 void		ft_lstinit_itr(t_list *lst, t_iter *itr);
 void		ft_lstiter(t_list *lst, void (*f)(void *));
 void		ft_lstpush(t_list **lst, t_list *content);
+void		ft_lsttocircular(t_list *lst);
 void		ft_memswap(void *value1, void *value2, size_t size);
 void		ft_putendl_fd(char *s, int fd);
 void		ft_putnbr_fd(int n, int fd);
