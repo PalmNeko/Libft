@@ -6,7 +6,7 @@
 /*   By: tookuyam <tookuyam@student.42tokyo.fr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/22 17:49:45 by tookuyam          #+#    #+#             */
-/*   Updated: 2024/08/08 16:44:43 by tookuyam         ###   ########.fr       */
+/*   Updated: 2024/08/15 08:50:36 by tookuyam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ typedef struct s_iter
 	void	*end;
 	void	*start;
 	void	*(*next)(struct s_iter *itr);
-	bool	(*has_next)(struct s_iter *itr);
+	bool	(*has_next)(struct s_iter * itr);
 	size_t	index;
 }	t_iter;
 
